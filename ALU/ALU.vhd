@@ -1,0 +1,34 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY ALU IS 
+	PORT (
+		a_in, b_in: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		op: IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+		r: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		c, z: OUT STD_LOGIC
+	);
+END ENTITY;
+
+ARCHITECTURE arch OF ALU IS
+	SIGNAL whole: STD_LOGIC_VECTOR(8 DOWNTO 0);
+BEGIN
+	WITH op SELECT
+		whole <= '0' & (a_in AND b_in) WHEN "000",
+				 '0' & (a_in OR b_in) WHEN "001",
+				 '0' & (a_in XOR b_in) WHEN "010",
+				 '0' & NOT a_in WHEN "011",
+				 a_in(7) & a_in(6 DOWNTO 0) & '0' WHEN "100",
+				 "00" & a_in(7 DOWNTO 1) WHEN "101",
+				 ('0' & a_in) + ('0' & b_in) WHEN "110",
+				 ('0' & a_in) - ('0' & b_in) WHEN OTHERS;
+		
+		r <= whole(7 DOWNTO 0);
+		c <= whole(8);
+		z <= '1' WHEN whole(7 DOWNTO 0) = "00000000" ELSE '0';
+		
+END arch;
+		
+				 
+	
