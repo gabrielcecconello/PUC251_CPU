@@ -32,21 +32,21 @@ BEGIN
 				 a_in(0) & '0' & a_in(7 DOWNTO 1) WHEN "1101", -- SRL
 				 a_in(0) & a_in(7) & a_in(7 DOWNTO 1) WHEN "1110", -- SRA
 				 '0' & b_in WHEN "1111", -- PASS_B
-				 (others => '0) WHEN OTHERS;
+				 (others => '0') WHEN OTHERS;
 		
 	r <= whole(7 DOWNTO 0);
 	c_out <= whole(8);
 	z <= '1' WHEN whole(7 DOWNTO 0) = "00000000" ELSE '0';
 		
 	WITH op SELECT
-		v <= (a_in[7] AND b_in[7] AND NOT r[7]) OR
-			 (NOT a_in[7] AND NOT b_in[7] AND r[7]) WHEN "0000", -- ADD
-			 (a_in[7] AND b_in[7] AND NOT r[7]) OR
-			 (NOT a_in[7] AND NOT b_in[7] AND r[7]) WHEN "0001", -- ADDC
-			 (NOT a_in[7] AND b_in[7] AND r[7]) OR
-			 (a_in[7] AND NOT b_in[7] AND NOT r[7]) WHEN "0010", -- SUB
-			 (NOT a_in[7] AND b_in[7] AND r[7]) OR
-			 (a_in[7] AND NOT b_in[7] AND NOT r[7]) WHEN "0011", -- SUBC
+		v <= (a_in(7) AND b_in(7) AND NOT whole(7)) OR
+			 (NOT a_in(7) AND NOT b_in(7) AND whole(7)) WHEN "0000", -- ADD
+			 (a_in(7) AND b_in(7) AND NOT whole(7)) OR
+			 (NOT a_in(7) AND NOT b_in(7) AND whole(7)) WHEN "0001", -- ADDC
+			 (NOT a_in(7) AND b_in(7) AND whole(7)) OR
+			 (a_in(7) AND NOT b_in(7) AND NOT whole(7)) WHEN "0010", -- SUB
+			 (NOT a_in(7) AND b_in(7) AND whole(7)) OR
+			 (a_in(7) AND NOT b_in(7) AND NOT whole(7)) WHEN "0011", -- SUBC
 			 '0' WHEN OTHERS;
 		
 END arch;
