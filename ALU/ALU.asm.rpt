@@ -1,5 +1,5 @@
 Assembler report for ALU
-Thu Apr 24 21:25:23 2025
+Mon Apr 28 00:57:57 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Apr 24 21:25:23 2025 ;
+; Assembler Status      ; Successful - Mon Apr 28 00:57:57 2025 ;
 ; Revision Name         ; ALU                                   ;
 ; Top-level Entity Name ; ALU                                   ;
 ; Family                ; Cyclone II                            ;
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Apr 24 21:25:22 2025
+    Info: Processing started: Mon Apr 28 00:57:55 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ALU -c ALU
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 259 megabytes
-    Info: Processing ended: Thu Apr 24 21:25:23 2025
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 258 megabytes
+    Info: Processing ended: Mon Apr 28 00:57:57 2025
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Thu Apr 24 21:30:40 2025
+Mon Apr 28 00:57:42 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 24 21:30:40 2025        ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 28 00:57:42 2025        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; ALU                                          ;
 ; Top-level Entity Name              ; ALU                                          ;
@@ -260,7 +260,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Apr 24 21:30:39 2025
+    Info: Processing started: Mon Apr 28 00:57:41 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Info: Found 2 design units, including 1 entities, in source file alu.vhd
     Info: Found design unit 1: ALU-arch
@@ -281,8 +281,8 @@ Info: Implemented 128 device resources after synthesis - the final resource coun
     Info: Implemented 11 output pins
     Info: Implemented 96 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 248 megabytes
-    Info: Processing ended: Thu Apr 24 21:30:40 2025
+    Info: Peak virtual memory: 247 megabytes
+    Info: Processing ended: Mon Apr 28 00:57:42 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

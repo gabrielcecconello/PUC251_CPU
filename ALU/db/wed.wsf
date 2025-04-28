@@ -24,9 +24,9 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/ALU/ALU.vwf"
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 114624;
-		NUMERATOR = 2293;
-		DENOMINATOR = 114624;
+		ZEND = 125000;
+		NUMERATOR = 2159;
+		DENOMINATOR = 125000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

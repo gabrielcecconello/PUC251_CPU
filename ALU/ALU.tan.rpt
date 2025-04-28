@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for ALU
-Thu Apr 24 21:25:24 2025
+Mon Apr 28 00:57:59 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -286,7 +286,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Apr 24 21:25:24 2025
+    Info: Processing started: Mon Apr 28 00:57:58 2025
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ALU -c ALU --timing_analysis_only
 Info: Longest tpd from source pin "b_in[0]" to destination pin "z" is 17.888 ns
     Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_G15; Fanout = 3; PIN Node = 'b_in[0]'
@@ -305,9 +305,9 @@ Info: Longest tpd from source pin "b_in[0]" to destination pin "z" is 17.888 ns
     Info: Total cell delay = 7.380 ns ( 41.26 % )
     Info: Total interconnect delay = 10.508 ns ( 58.74 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 178 megabytes
-    Info: Processing ended: Thu Apr 24 21:25:24 2025
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 177 megabytes
+    Info: Processing ended: Mon Apr 28 00:57:59 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 
