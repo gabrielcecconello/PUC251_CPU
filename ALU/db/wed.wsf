@@ -327,14 +327,14 @@ VECTOR("C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/ALU/db/ALU.s
 	}
 }
 
-VECTOR("C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/ALU/ALU.vwf")
+VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/ALU/ALU.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 250000;
 		NUMERATOR = 1069;
 		DENOMINATOR = 250000;
-		TOP_INDEX = 8;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 10000;

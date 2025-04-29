@@ -1,5 +1,5 @@
 Simulator report for ALU
-Mon Apr 28 17:45:22 2025
+Mon Apr 28 23:02:31 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
 ; Simulation Netlist Size     ; 1653 nodes   ;
-; Simulation Coverage         ;      89.35 % ;
-; Total Number of Transitions ; 9302         ;
+; Simulation Coverage         ;      93.04 % ;
+; Total Number of Transitions ; 14522        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 ; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
 ; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
 ; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
 ; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
 +--------------------------------------------------------------------------------------------+------------+---------------+
 
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      89.35 % ;
+; Total coverage as a percentage                      ;      93.04 % ;
 ; Total nodes checked                                 ; 1653         ;
 ; Total output ports checked                          ; 1653         ;
-; Total output ports with complete 1/0-value coverage ; 1477         ;
-; Total output ports with no 1/0-value coverage       ; 176          ;
-; Total output ports with no 1-value coverage         ; 176          ;
-; Total output ports with no 0-value coverage         ; 176          ;
+; Total output ports with complete 1/0-value coverage ; 1538         ;
+; Total output ports with no 1/0-value coverage       ; 107          ;
+; Total output ports with no 1-value coverage         ; 115          ;
+; Total output ports with no 0-value coverage         ; 107          ;
 +-----------------------------------------------------+--------------+
 
 
@@ -157,6 +157,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|c_in                                                 ; |ALU|c_in                                                 ; out              ;
 ; |ALU|op[0]                                                ; |ALU|op[0]                                                ; out              ;
 ; |ALU|op[1]                                                ; |ALU|op[1]                                                ; out              ;
+; |ALU|op[2]                                                ; |ALU|op[2]                                                ; out              ;
 ; |ALU|r[0]                                                 ; |ALU|r[0]                                                 ; pin_out          ;
 ; |ALU|r[1]                                                 ; |ALU|r[1]                                                 ; pin_out          ;
 ; |ALU|r[2]                                                 ; |ALU|r[2]                                                 ; pin_out          ;
@@ -306,6 +307,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~48             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~50             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~50             ; out0             ;
@@ -320,6 +322,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~63             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~63             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~64             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~64             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~65             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~65             ; out0             ;
+; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~71             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~72             ; out0             ;
@@ -344,6 +347,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~98             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~100            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~100            ; out0             ;
@@ -358,6 +362,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~113            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~113            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~114            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~114            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~115            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~115            ; out0             ;
+; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~118            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~118            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~120            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~120            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~122            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~122            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~124            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~124            ; out0             ;
@@ -372,6 +377,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~137            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~137            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~138            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~138            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~139            ; out0             ;
+; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~0              ; out0             ;
@@ -395,6 +402,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~24             ; out0             ;
@@ -404,6 +412,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~28             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~28             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~29             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~29             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~30             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~30             ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~31             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~31             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~32             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~32             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~33             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~33             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~34             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~34             ; out0             ;
@@ -416,6 +425,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~48             ; out0             ;
@@ -441,6 +451,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~74             ; out0             ;
@@ -450,6 +461,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~78             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~78             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~79             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~79             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~80             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~80             ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~81             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~81             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~82             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~82             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~83             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~83             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~84             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~84             ; out0             ;
@@ -462,6 +474,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~98             ; out0             ;
@@ -503,6 +516,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~0              ; out0             ;
@@ -526,6 +541,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~24             ; out0             ;
@@ -548,6 +564,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~48             ; out0             ;
@@ -573,6 +590,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~74             ; out0             ;
@@ -595,6 +613,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~98             ; out0             ;
@@ -640,6 +659,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~0              ; out0             ;
@@ -663,6 +684,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~24             ; out0             ;
@@ -685,6 +707,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~48             ; out0             ;
@@ -710,6 +733,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~74             ; out0             ;
@@ -732,6 +756,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~98             ; out0             ;
@@ -777,6 +802,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~0              ; out0             ;
@@ -800,6 +827,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~24             ; out0             ;
@@ -822,6 +850,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~48             ; out0             ;
@@ -847,6 +876,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~74             ; out0             ;
@@ -869,6 +899,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~98             ; out0             ;
@@ -914,6 +945,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~0              ; out0             ;
@@ -937,6 +970,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~24             ; out0             ;
@@ -959,6 +993,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~48             ; out0             ;
@@ -984,6 +1019,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~74             ; out0             ;
@@ -1006,6 +1042,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~98             ; out0             ;
@@ -1051,6 +1088,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~0              ; out0             ;
@@ -1074,6 +1113,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~24             ; out0             ;
@@ -1096,6 +1136,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~48             ; out0             ;
@@ -1121,6 +1162,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~74             ; out0             ;
@@ -1143,6 +1185,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~98             ; out0             ;
@@ -1188,6 +1231,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~0              ; out0             ;
@@ -1211,6 +1256,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~24             ; out0             ;
@@ -1233,6 +1279,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~48             ; out0             ;
@@ -1258,6 +1305,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~74             ; out0             ;
@@ -1280,6 +1328,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~98             ; out0             ;
@@ -1325,6 +1374,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~0              ; out0             ;
@@ -1344,6 +1395,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~18             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~18             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~19             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~19             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~20             ; out0             ;
+; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~22             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~22             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~23             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~23             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~24             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~24             ; out0             ;
@@ -1366,6 +1418,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~48             ; out0             ;
@@ -1391,6 +1444,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~70             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~70             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~71             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~71             ; out0             ;
+; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~72             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~72             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~73             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~73             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~74             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~74             ; out0             ;
@@ -1413,6 +1467,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~98             ; out0             ;
@@ -1456,6 +1511,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]   ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~1              ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~1              ; out0             ;
@@ -1493,6 +1550,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~41             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~41             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~42             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~42             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~44             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~44             ; out0             ;
+; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~46             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~46             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~48             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~48             ; out0             ;
@@ -1540,6 +1598,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~91             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~91             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~92             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~92             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~94             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~94             ; out0             ;
+; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~96             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~96             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~98             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~98             ; out0             ;
@@ -1585,6 +1644,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~139            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~139            ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~141            ; out0             ;
+; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~142            ; out0             ;
+; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]~1 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]~1 ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]   ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]   ; out0             ;
 +-----------------------------------------------------------+-----------------------------------------------------------+------------------+
@@ -1601,7 +1662,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ALU|v~4                                                  ; |ALU|v~4                                                  ; out0             ;
 ; |ALU|v~5                                                  ; |ALU|v~5                                                  ; out0             ;
 ; |ALU|b_in[7]                                              ; |ALU|b_in[7]                                              ; out              ;
-; |ALU|op[2]                                                ; |ALU|op[2]                                                ; out              ;
 ; |ALU|op[3]                                                ; |ALU|op[3]                                                ; out              ;
 ; |ALU|Add0~35                                              ; |ALU|Add0~35                                              ; out0             ;
 ; |ALU|Add0~36                                              ; |ALU|Add0~36                                              ; out0             ;
@@ -1628,7 +1688,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~20             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~49             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~49             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~51             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~51             ; out0             ;
@@ -1637,11 +1696,9 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~60             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~60             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~66             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~66             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~67             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~67             ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~69             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~99             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~99             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~101            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~101            ; out0             ;
@@ -1650,7 +1707,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~110            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~110            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~116            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~116            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~117            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~117            ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~118            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~118            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~119            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~121            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~121            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~123            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~123            ; out0             ;
@@ -1660,100 +1716,48 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~134            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~134            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~141            ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~21             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~31             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~31             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~81             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~81             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~119            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~123            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~123            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~125            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~125            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~132            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~132            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~134            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~134            ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~2              ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~2              ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~4              ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~4              ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~11             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~11             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~13             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~13             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~119            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~121            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~121            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~130            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~130            ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~0              ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~2              ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~2              ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~4              ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~4              ; out0             ;
@@ -1764,14 +1768,10 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~20             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~69             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~143            ; out0             ;
 +-----------------------------------------------------------+-----------------------------------------------------------+------------------+
 
 
@@ -1781,21 +1781,12 @@ The following table displays output ports that do not toggle to 0 during simulat
 +-----------------------------------------------------------+-----------------------------------------------------------+------------------+
 ; Node Name                                                 ; Output Port Name                                          ; Output Port Type ;
 +-----------------------------------------------------------+-----------------------------------------------------------+------------------+
-; |ALU|whole~7                                              ; |ALU|whole~7                                              ; out0             ;
-; |ALU|v~0                                                  ; |ALU|v~0                                                  ; out0             ;
-; |ALU|v~4                                                  ; |ALU|v~4                                                  ; out0             ;
-; |ALU|v~5                                                  ; |ALU|v~5                                                  ; out0             ;
-; |ALU|b_in[7]                                              ; |ALU|b_in[7]                                              ; out              ;
-; |ALU|op[2]                                                ; |ALU|op[2]                                                ; out              ;
 ; |ALU|op[3]                                                ; |ALU|op[3]                                                ; out              ;
-; |ALU|Add0~35                                              ; |ALU|Add0~35                                              ; out0             ;
-; |ALU|Add0~36                                              ; |ALU|Add0~36                                              ; out0             ;
 ; |ALU|Add1~7                                               ; |ALU|Add1~7                                               ; out0             ;
 ; |ALU|Add1~9                                               ; |ALU|Add1~9                                               ; out0             ;
 ; |ALU|Add1~11                                              ; |ALU|Add1~11                                              ; out0             ;
 ; |ALU|Add1~13                                              ; |ALU|Add1~13                                              ; out0             ;
 ; |ALU|Add1~15                                              ; |ALU|Add1~15                                              ; out0             ;
-; |ALU|Add2~21                                              ; |ALU|Add2~21                                              ; out0             ;
 ; |ALU|Add3~4                                               ; |ALU|Add3~4                                               ; out0             ;
 ; |ALU|Add3~7                                               ; |ALU|Add3~7                                               ; out0             ;
 ; |ALU|Add3~10                                              ; |ALU|Add3~10                                              ; out0             ;
@@ -1813,7 +1804,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~20             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~47             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~47             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~49             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~49             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~51             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~51             ; out0             ;
@@ -1822,11 +1812,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~60             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~60             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~66             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~66             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~67             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~67             ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~68             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~68             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~69             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~97             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~97             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~99             ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~99             ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~101            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~101            ; out0             ;
@@ -1835,7 +1823,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~110            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~110            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~116            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~116            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~117            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~117            ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~118            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~118            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~119            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~121            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~121            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~123            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~123            ; out0             ;
@@ -1845,100 +1832,48 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~134            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~134            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~140            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~140            ; out0             ;
 ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~141            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~141            ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux9|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~21             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~31             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~31             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~81             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~81             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~119            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~123            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~123            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~125            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~125            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~132            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~132            ; out0             ;
 ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~134            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~134            ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux8|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux7|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux6|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux5|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux4|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux3|mux_joc:auto_generated|_~143            ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux2|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~2              ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~2              ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~4              ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~4              ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~11             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~11             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~13             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~13             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~69             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~119            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~121            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~121            ; out0             ;
 ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~130            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~130            ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux1|mux_joc:auto_generated|_~143            ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~0              ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~0              ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~2              ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~2              ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~4              ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~4              ; out0             ;
@@ -1949,14 +1884,10 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~20             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~20             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~21             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~21             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~43             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~43             ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~45             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~45             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~69             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~69             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]~0 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|result_node[0]~0 ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~93             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~93             ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~95             ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~95             ; out0             ;
 ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~119            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~119            ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~142            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~142            ; out0             ;
-; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~143            ; |ALU|lpm_mux:Mux0|mux_joc:auto_generated|_~143            ; out0             ;
 +-----------------------------------------------------------+-----------------------------------------------------------+------------------+
 
 
@@ -1973,17 +1904,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Apr 28 17:45:22 2025
+    Info: Processing started: Mon Apr 28 23:02:31 2025
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ALU -c ALU
-Info: Using vector source file "C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/ALU/ALU.vwf"
+Info: Using vector source file "C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/ALU/ALU.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of ALU.vwf called ALU.sim_ori.vwf has been created in the db folder
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      89.35 %
-Info: Number of transitions in simulation is 9302
+Info: Simulation coverage is      93.04 %
+Info: Number of transitions in simulation is 14522
+Info: Vector file ALU.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 149 megabytes
-    Info: Processing ended: Mon Apr 28 17:45:22 2025
+    Info: Peak virtual memory: 148 megabytes
+    Info: Processing ended: Mon Apr 28 23:02:31 2025
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
