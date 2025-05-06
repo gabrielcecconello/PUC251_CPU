@@ -15,23 +15,49 @@ ENTITY reg_bank IS
 END ENTITY;
 
 ARCHITECTURE arch OF ALU IS
+	SIGNAL R0, R1, R2, R3: STD_LOGIC_VECTOR(7 DOWNTO 0);
 BEGIN
+	-- Código Sequencial para a parte de escrita.
 	PROCESS(clk_in, nrst)
-		VARIABLE r0, r1, r2, r3: STD_LOGIC_VECTOR(7 DOWNTO 0);
 	BEGIN
 		IF nrst = '0' THEN
-			r0 := (others => '0');
-			r1 := (others => '0');
-			r2 := (others => '0');
-			r3 := (others => '0');
-		ELSIF RISING_EDGE(clk) AND regn_wr_en = '1' THEN
-			IF reg_wr_en = "00" THEN
-				r0 := regn_di;
-			ELSIF reg_wr_en = "01" THEN
-				r1 := regn_di;
-			ELSIF reg_wr_en = "10" THEN
-				r2 := regn_di;
-			ELSIF reg_wr_en = "11" THEN
-				r3 := regn_di;
-		
+			R0 <= (others => '0');
+			R1 <= (others => '0');
+			R2 <= (others => '0');
+			R3 <= (others => '0');
+		ELSIF RISING_EDGE(clk_in) AND THEN
+			-- Flags c, z e v possuem prioridade.
+			IF c_flag_wr_ena = '1' THEN
+				R3(0) <= c_flag_in;
+			END IF;
+			IF z_flag_wr_ena = '1' THEN
+				R3(1) <= z_flag_in;
+			END IF;
+			IF v_flag_wr_ena = '1' THEN
+				R3(2) <= v_flag_in;
+			END IF;
+				
+			IF regn_wr_en = '1' AND
+			 NOT (c_flag_wr_ena = '1' or z_flag_wr_ena = '1' or v_flag_wr_ena = '1') THEN
+				CASE regn_wr_sel is
+					WHEN "00" => R0 <= regn_di;
+					WHEN "01" => R1 <= regn_di;
+					WHEN "10" => R2 <= regn_di;
+					WHEN "11" => R3 <= regn_di;
+					WHEN OTHERS => NULL;
+				END CASE;
+			END IF;
+		END IF;
+	END PROCESS;
+	
+	-- Código Concorrente para a parte de leitura.
+	regn_do <= R0 when regn_rd_sel = "00" else
+			   R1 when regn_rd_sel = "01" else
+			   R2 when regn_rd_sel = "10" else
+			   R3;
+			   
+	c_flag_out <= R3(0);
+	z_flag_out <= R3(1);
+	v_flag_out <= R3(2);
+	
 END arch;
