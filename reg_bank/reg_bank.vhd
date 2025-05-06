@@ -8,13 +8,13 @@ ENTITY reg_bank IS
 		regn_wr_sel, regn_rd_sel: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		clk_in, nrst: IN STD_LOGIC;
 		c_flag_in, z_flag_in, v_flag_in: IN STD_LOGIC;
-		reg_flag_wr_ena, c_flag_wr_ena, z_flag_wr_ena, v_flag_wr_ena: IN STD_LOGIC; 
+		regn_wr_ena, c_flag_wr_ena, z_flag_wr_ena, v_flag_wr_ena: IN STD_LOGIC; 
 		regn_do: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		c_flag_out, z_flag_out, v_flag_out: OUT STD_LOGIC
 	);
 END ENTITY;
 
-ARCHITECTURE arch OF ALU IS
+ARCHITECTURE arch OF reg_bank IS
 	SIGNAL R0, R1, R2, R3: STD_LOGIC_VECTOR(7 DOWNTO 0);
 BEGIN
 	-- Código Sequencial para a parte de escrita.
@@ -25,7 +25,7 @@ BEGIN
 			R1 <= (others => '0');
 			R2 <= (others => '0');
 			R3 <= (others => '0');
-		ELSIF RISING_EDGE(clk_in) AND THEN
+		ELSIF RISING_EDGE(clk_in) THEN
 			-- Flags c, z e v possuem prioridade.
 			IF c_flag_wr_ena = '1' THEN
 				R3(0) <= c_flag_in;
@@ -37,7 +37,7 @@ BEGIN
 				R3(2) <= v_flag_in;
 			END IF;
 				
-			IF regn_wr_en = '1' AND
+			IF regn_wr_ena = '1' AND
 			 NOT (c_flag_wr_ena = '1' or z_flag_wr_ena = '1' or v_flag_wr_ena = '1') THEN
 				CASE regn_wr_sel is
 					WHEN "00" => R0 <= regn_di;
