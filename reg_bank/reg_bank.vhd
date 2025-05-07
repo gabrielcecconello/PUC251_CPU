@@ -38,8 +38,8 @@ BEGIN
 			END IF;
 				
 			IF regn_wr_ena = '1' AND
-			 NOT (c_flag_wr_ena = '1' or z_flag_wr_ena = '1' or v_flag_wr_ena = '1') THEN
-				CASE regn_wr_sel is
+			 NOT (c_flag_wr_ena = '1' OR z_flag_wr_ena = '1' OR v_flag_wr_ena = '1') THEN
+				CASE regn_wr_sel IS
 					WHEN "00" => R0 <= regn_di;
 					WHEN "01" => R1 <= regn_di;
 					WHEN "10" => R2 <= regn_di;
@@ -51,9 +51,9 @@ BEGIN
 	END PROCESS;
 	
 	-- Código Concorrente para a parte de leitura.
-	regn_do <= R0 when regn_rd_sel = "00" else
-			   R1 when regn_rd_sel = "01" else
-			   R2 when regn_rd_sel = "10" else
+	regn_do <= R0 WHEN regn_rd_sel = "00" ELSE
+			   R1 WHEN regn_rd_sel = "01" ELSE
+			   R2 WHEN regn_rd_sel = "10" ELSE
 			   R3;
 			   
 	c_flag_out <= R3(0);
