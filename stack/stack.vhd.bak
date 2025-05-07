@@ -12,21 +12,43 @@ ENTITY stack IS
 END ENTITY;
 
 ARCHITECTURE arch OF stack IS
-	SIGNAL r: STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SIGNAL R0, R1, R2, R3, R4, R5, R6, R7: STD_LOGIC_VECTOR(10 DOWNTO 0);
 BEGIN
 	-- Código Sequencial para a parte de entrada.
 	PROCESS(clk_in, nrst)
 	BEGIN
 		IF nrst = '0' THEN
-			r <= (others => '0');
+			R0 <= (others => '0');
+			R1 <= (others => '0');
+			R2 <= (others => '0');
+			R3 <= (others => '0');
+			R4 <= (others => '0');
+			R5 <= (others => '0');
+			R6 <= (others => '0');
+			R7 <= (others => '0');
 		ELSIF RISING_EDGE(clk_in) THEN
-			IF wr_en = '1' THEN
-				r <= d_in;
+			IF stack_push = '1' THEN
+				R0 <= stack_in;
+				R1 <= R0;
+				R2 <= R1;
+				
+				R7 <= R6;
+				R6 <= R5;
+				R5 <= R4;
+				R4 <= R3;
+				R3 <= R2;
+			ELSIF stack_pop = '1' THEN
+				stack_out <= R0;
+				R0 <= R1;
+				R1 <= R2;
+				R2 <= R3;
+				R3 <= R4;
+				R4 <= R5;
+				R5 <= R6;
+				R6 <= R7;
+				R7 <= (others => '0');
 			END IF;
 		END IF;
 	END PROCESS;
-	
-	-- Código Concorrente para a parte de saída.
-	w_out <= r;
 	
 END arch;
