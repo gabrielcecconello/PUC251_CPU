@@ -14,7 +14,7 @@ END ENTITY;
 ARCHITECTURE arch OF stack IS
 	SIGNAL R0, R1, R2, R3, R4, R5, R6, R7: STD_LOGIC_VECTOR(10 DOWNTO 0);
 BEGIN
-	-- Código Sequencial para a parte de entrada.
+	-- Código Sequencial para push e pop na pilha.
 	PROCESS(clk_in, nrst)
 	BEGIN
 		IF nrst = '0' THEN
