@@ -26,7 +26,7 @@ HEADER
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
 	DATA_DURATION = 1000.0;
-	SIMULATION_TIME = 1000.0;
+	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
@@ -414,9 +414,7 @@ TRANSITION_LIST("c_flag_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 35.0;
-		LEVEL 1 FOR 65.0;
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -540,15 +538,7 @@ TRANSITION_LIST("regn_do[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 15.0;
-		LEVEL 1 FOR 25.0;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 15.0;
-			LEVEL 1 FOR 5.0;
-		}
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -557,15 +547,7 @@ TRANSITION_LIST("regn_do[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 15.0;
-		LEVEL 1 FOR 25.0;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 15.0;
-			LEVEL 1 FOR 5.0;
-		}
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -574,15 +556,7 @@ TRANSITION_LIST("regn_do[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 15.0;
-		LEVEL 1 FOR 25.0;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 15.0;
-			LEVEL 1 FOR 5.0;
-		}
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -591,15 +565,7 @@ TRANSITION_LIST("regn_do[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 15.0;
-		LEVEL 1 FOR 25.0;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 15.0;
-			LEVEL 1 FOR 5.0;
-		}
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -608,15 +574,7 @@ TRANSITION_LIST("regn_do[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 15.0;
-		LEVEL 1 FOR 25.0;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 15.0;
-			LEVEL 1 FOR 5.0;
-		}
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -625,9 +583,7 @@ TRANSITION_LIST("regn_do[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 35.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 960.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -636,9 +592,7 @@ TRANSITION_LIST("regn_do[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 35.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 960.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -647,9 +601,7 @@ TRANSITION_LIST("regn_do[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 35.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 960.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -744,9 +696,7 @@ TRANSITION_LIST("v_flag_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 35.0;
-		LEVEL 1 FOR 65.0;
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -781,9 +731,7 @@ TRANSITION_LIST("z_flag_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 35.0;
-		LEVEL 1 FOR 65.0;
-		LEVEL 0 FOR 900.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
