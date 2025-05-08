@@ -44,7 +44,60 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
+prog_cnt:inst
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+stack_prog_cnt
+# storage
+db|prog_cnt.(1).cnf
+db|prog_cnt.(1).cnf
+# case_insensitive
+# source_file
+stack_prog_cnt.bdf
+f47edfc613bcbb18d2296cf8f4a12f1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+stack
+# storage
+db|prog_cnt.(2).cnf
+db|prog_cnt.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|stack|stack.vhd
+fa7bcf622438f5c7eb1d5a608a9fe21f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+stack:inst1
 }
 # lmf
 |users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
