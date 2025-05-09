@@ -1,5 +1,5 @@
 Simulator report for stack
-Fri May 09 12:20:24 2025
+Fri May 09 14:02:34 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
 ; Simulation Netlist Size     ; 323 nodes    ;
-; Simulation Coverage         ;      30.03 % ;
-; Total Number of Transitions ; 714          ;
+; Simulation Coverage         ;      34.67 % ;
+; Total Number of Transitions ; 768          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      30.03 % ;
+; Total coverage as a percentage                      ;      34.67 % ;
 ; Total nodes checked                                 ; 323          ;
 ; Total output ports checked                          ; 323          ;
-; Total output ports with complete 1/0-value coverage ; 97           ;
-; Total output ports with no 1/0-value coverage       ; 226          ;
-; Total output ports with no 1-value coverage         ; 226          ;
-; Total output ports with no 0-value coverage         ; 226          ;
+; Total output ports with complete 1/0-value coverage ; 112          ;
+; Total output ports with no 1/0-value coverage       ; 211          ;
+; Total output ports with no 1-value coverage         ; 211          ;
+; Total output ports with no 0-value coverage         ; 211          ;
 +-----------------------------------------------------+--------------+
 
 
@@ -156,6 +156,13 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |stack|R0~8              ; |stack|R0~8              ; out              ;
 ; |stack|R0~9              ; |stack|R0~9              ; out              ;
 ; |stack|R0~10             ; |stack|R0~10             ; out              ;
+; |stack|R0~11             ; |stack|R0~11             ; out              ;
+; |stack|R0~12             ; |stack|R0~12             ; out              ;
+; |stack|R0~13             ; |stack|R0~13             ; out              ;
+; |stack|R0~14             ; |stack|R0~14             ; out              ;
+; |stack|R0~15             ; |stack|R0~15             ; out              ;
+; |stack|R0~16             ; |stack|R0~16             ; out              ;
+; |stack|R0~17             ; |stack|R0~17             ; out              ;
 ; |stack|R0~18             ; |stack|R0~18             ; out              ;
 ; |stack|R0~19             ; |stack|R0~19             ; out              ;
 ; |stack|R0~20             ; |stack|R0~20             ; out              ;
@@ -200,7 +207,15 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |stack|stack_in[1]       ; |stack|stack_in[1]       ; out              ;
 ; |stack|stack_in[2]       ; |stack|stack_in[2]       ; out              ;
 ; |stack|stack_in[3]       ; |stack|stack_in[3]       ; out              ;
+; |stack|stack_in[4]       ; |stack|stack_in[4]       ; out              ;
+; |stack|stack_in[5]       ; |stack|stack_in[5]       ; out              ;
+; |stack|stack_in[6]       ; |stack|stack_in[6]       ; out              ;
+; |stack|stack_in[7]       ; |stack|stack_in[7]       ; out              ;
+; |stack|stack_in[8]       ; |stack|stack_in[8]       ; out              ;
+; |stack|stack_in[9]       ; |stack|stack_in[9]       ; out              ;
+; |stack|stack_in[10]      ; |stack|stack_in[10]      ; out              ;
 ; |stack|clk_in            ; |stack|clk_in            ; out              ;
+; |stack|nrst              ; |stack|nrst              ; out              ;
 ; |stack|stack_push        ; |stack|stack_push        ; out              ;
 ; |stack|stack_pop         ; |stack|stack_pop         ; out              ;
 ; |stack|stack_out[0]      ; |stack|stack_out[0]      ; pin_out          ;
@@ -335,13 +350,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |stack|R0~4               ; |stack|R0~4               ; out              ;
 ; |stack|R0~5               ; |stack|R0~5               ; out              ;
 ; |stack|R0~6               ; |stack|R0~6               ; out              ;
-; |stack|R0~11              ; |stack|R0~11              ; out              ;
-; |stack|R0~12              ; |stack|R0~12              ; out              ;
-; |stack|R0~13              ; |stack|R0~13              ; out              ;
-; |stack|R0~14              ; |stack|R0~14              ; out              ;
-; |stack|R0~15              ; |stack|R0~15              ; out              ;
-; |stack|R0~16              ; |stack|R0~16              ; out              ;
-; |stack|R0~17              ; |stack|R0~17              ; out              ;
 ; |stack|stack_out~0        ; |stack|stack_out~0        ; out              ;
 ; |stack|stack_out~1        ; |stack|stack_out~1        ; out              ;
 ; |stack|stack_out~2        ; |stack|stack_out~2        ; out              ;
@@ -427,14 +435,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |stack|stack_out[6]~reg0  ; |stack|stack_out[6]~reg0  ; regout           ;
 ; |stack|stack_out[5]~reg0  ; |stack|stack_out[5]~reg0  ; regout           ;
 ; |stack|stack_out[4]~reg0  ; |stack|stack_out[4]~reg0  ; regout           ;
-; |stack|stack_in[4]        ; |stack|stack_in[4]        ; out              ;
-; |stack|stack_in[5]        ; |stack|stack_in[5]        ; out              ;
-; |stack|stack_in[6]        ; |stack|stack_in[6]        ; out              ;
-; |stack|stack_in[7]        ; |stack|stack_in[7]        ; out              ;
-; |stack|stack_in[8]        ; |stack|stack_in[8]        ; out              ;
-; |stack|stack_in[9]        ; |stack|stack_in[9]        ; out              ;
-; |stack|stack_in[10]       ; |stack|stack_in[10]       ; out              ;
-; |stack|nrst               ; |stack|nrst               ; out              ;
 ; |stack|stack_out[4]       ; |stack|stack_out[4]       ; pin_out          ;
 ; |stack|stack_out[5]       ; |stack|stack_out[5]       ; pin_out          ;
 ; |stack|stack_out[6]       ; |stack|stack_out[6]       ; pin_out          ;
@@ -570,13 +570,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |stack|R0~4               ; |stack|R0~4               ; out              ;
 ; |stack|R0~5               ; |stack|R0~5               ; out              ;
 ; |stack|R0~6               ; |stack|R0~6               ; out              ;
-; |stack|R0~11              ; |stack|R0~11              ; out              ;
-; |stack|R0~12              ; |stack|R0~12              ; out              ;
-; |stack|R0~13              ; |stack|R0~13              ; out              ;
-; |stack|R0~14              ; |stack|R0~14              ; out              ;
-; |stack|R0~15              ; |stack|R0~15              ; out              ;
-; |stack|R0~16              ; |stack|R0~16              ; out              ;
-; |stack|R0~17              ; |stack|R0~17              ; out              ;
 ; |stack|stack_out~0        ; |stack|stack_out~0        ; out              ;
 ; |stack|stack_out~1        ; |stack|stack_out~1        ; out              ;
 ; |stack|stack_out~2        ; |stack|stack_out~2        ; out              ;
@@ -662,14 +655,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |stack|stack_out[6]~reg0  ; |stack|stack_out[6]~reg0  ; regout           ;
 ; |stack|stack_out[5]~reg0  ; |stack|stack_out[5]~reg0  ; regout           ;
 ; |stack|stack_out[4]~reg0  ; |stack|stack_out[4]~reg0  ; regout           ;
-; |stack|stack_in[4]        ; |stack|stack_in[4]        ; out              ;
-; |stack|stack_in[5]        ; |stack|stack_in[5]        ; out              ;
-; |stack|stack_in[6]        ; |stack|stack_in[6]        ; out              ;
-; |stack|stack_in[7]        ; |stack|stack_in[7]        ; out              ;
-; |stack|stack_in[8]        ; |stack|stack_in[8]        ; out              ;
-; |stack|stack_in[9]        ; |stack|stack_in[9]        ; out              ;
-; |stack|stack_in[10]       ; |stack|stack_in[10]       ; out              ;
-; |stack|nrst               ; |stack|nrst               ; out              ;
 ; |stack|stack_out[4]       ; |stack|stack_out[4]       ; pin_out          ;
 ; |stack|stack_out[5]       ; |stack|stack_out[5]       ; pin_out          ;
 ; |stack|stack_out[6]       ; |stack|stack_out[6]       ; pin_out          ;
@@ -693,7 +678,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri May 09 12:20:24 2025
+    Info: Processing started: Fri May 09 14:02:34 2025
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off stack -c stack
 Info: Using vector source file "C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/stack/stack.vwf"
 Info: Overwriting simulation input file with simulation results
@@ -701,12 +686,12 @@ Info: Overwriting simulation input file with simulation results
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      30.03 %
-Info: Number of transitions in simulation is 714
+Info: Simulation coverage is      34.67 %
+Info: Number of transitions in simulation is 768
 Info: Vector file stack.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 146 megabytes
-    Info: Processing ended: Fri May 09 12:20:24 2025
+    Info: Processing ended: Fri May 09 14:02:34 2025
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
