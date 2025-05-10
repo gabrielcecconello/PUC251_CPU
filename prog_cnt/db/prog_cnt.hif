@@ -60,7 +60,7 @@ db|prog_cnt.(1).cnf
 # case_insensitive
 # source_file
 stack_prog_cnt.bdf
-f47edfc613bcbb18d2296cf8f4a12f1
+f5a89675d195d13f32be46b488bfbe
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -84,7 +84,7 @@ ON
 # case_insensitive
 # source_file
 |users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|stack|stack.vhd
-fa7bcf622438f5c7eb1d5a608a9fe21f
+628a68ae8648d040d2ca3f96e1bad394
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

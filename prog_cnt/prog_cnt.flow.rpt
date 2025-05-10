@@ -1,5 +1,5 @@
 Flow report for prog_cnt
-Wed May 07 21:40:04 2025
+Sat May 10 19:00:24 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Wed May 07 21:40:04 2025        ;
+; Flow Status                        ; Successful - Sat May 10 19:00:24 2025        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; prog_cnt                                     ;
 ; Top-level Entity Name              ; stack_prog_cnt                               ;
@@ -63,25 +63,25 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2025 21:40:03 ;
+; Start date & time ; 05/10/2025 19:00:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; prog_cnt            ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+------------------------------------+------------------------------+---------------+----------------+----------------+
-; Assignment Name                    ; Value                        ; Default Value ; Entity Name    ; Section Id     ;
-+------------------------------------+------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 925251820839.174666480312812 ; --            ; --             ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                           ; --            ; --             ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                            ; --            ; --             ; --             ;
-; PARTITION_COLOR                    ; 16764057                     ; --            ; stack_prog_cnt ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                       ; --            ; stack_prog_cnt ; Top            ;
-; TOP_LEVEL_ENTITY                   ; stack_prog_cnt               ; prog_cnt      ; --             ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                          ; --            ; --             ; eda_blast_fpga ;
-+------------------------------------+------------------------------+---------------+----------------+----------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++------------------------------------+---------------------------------+---------------+----------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name    ; Section Id     ;
++------------------------------------+---------------------------------+---------------+----------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 233497588888768.174691442221876 ; --            ; --             ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --             ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --             ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; stack_prog_cnt ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; stack_prog_cnt ; Top            ;
+; TOP_LEVEL_ENTITY                   ; stack_prog_cnt                  ; prog_cnt      ; --             ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --             ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -89,8 +89,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 247 MB              ; 00:00:00                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 247 MB              ; 00:00:01                           ;
+; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -99,7 +99,7 @@ applicable agreement for further details.
 +----------------------+------------------+---------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +----------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis ; ProjetoDeTablet  ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; Compuiter        ; Windows Vista ; 6.2        ; x86_64         ;
 +----------------------+------------------+---------------+------------+----------------+
 
 

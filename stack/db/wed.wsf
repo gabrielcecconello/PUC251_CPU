@@ -23,8 +23,8 @@ applicable agreement for further details.
 VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/stack/stack.vwf")
 {
 	ZOOM{
-		ZBEGIN = 175740;
-		ZEND = 272252;
+		ZBEGIN = 189637;
+		ZEND = 297365;
 		NUMERATOR = 1419;
 		DENOMINATOR = 77637;
 		TOP_INDEX = 0;

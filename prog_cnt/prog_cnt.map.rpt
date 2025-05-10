@@ -1,5 +1,5 @@
 Analysis & Synthesis report for prog_cnt
-Wed May 07 21:40:04 2025
+Sat May 10 19:00:24 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 07 21:40:04 2025        ;
+; Analysis & Synthesis Status        ; Successful - Sat May 10 19:00:24 2025        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; prog_cnt                                     ;
 ; Top-level Entity Name              ; stack_prog_cnt                               ;
@@ -143,7 +143,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -153,9 +153,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                            ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+
-; ../stack/stack.vhd               ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/stack/stack.vhd             ;
-; stack_prog_cnt.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/prog_cnt/stack_prog_cnt.bdf ;
-; prog_cnt.vhd                     ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/prog_cnt/prog_cnt.vhd       ;
+; ../stack/stack.vhd               ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/stack/stack.vhd             ;
+; stack_prog_cnt.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/prog_cnt/stack_prog_cnt.bdf ;
+; prog_cnt.vhd                     ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/prog_cnt/prog_cnt.vhd       ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+
 
 
@@ -232,7 +232,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed May 07 21:40:03 2025
+    Info: Processing started: Sat May 10 19:00:22 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off prog_cnt -c prog_cnt
 Info: Found 2 design units, including 1 entities, in source file /users/gabri/downloads/tp1reconfiguraveis/reconfiguraveis/stack/stack.vhd
     Info: Found design unit 1: stack-arch
@@ -251,8 +251,8 @@ Info: Implemented 174 device resources after synthesis - the final resource coun
     Info: Implemented 145 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 247 megabytes
-    Info: Processing ended: Wed May 07 21:40:04 2025
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Sat May 10 19:00:24 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

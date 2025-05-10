@@ -15,13 +15,13 @@ ARCHITECTURE arch OF prog_cnt IS
 	SIGNAL comb_out, seq_out: STD_LOGIC_VECTOR(10 DOWNTO 0);
 BEGIN
 	-- Código sequencial para a parte combinacional do circuito.
-	PROCESS (pc_ctrl)
+	PROCESS (pc_ctrl, seq_out, new_pc_in, from_stack)
 	BEGIN
 		CASE pc_ctrl IS
 			WHEN "00" => comb_out <= seq_out;
 			WHEN "01" => comb_out <= new_pc_in;
  			WHEN "10" => comb_out <= from_stack;
-			WHEN "11" => comb_out <= seq_out + "00000000001";
+			WHEN "11" => comb_out <= seq_out + "000000000001";
 			WHEN OTHERS => NULL;
 		END CASE;
 	END PROCESS;
