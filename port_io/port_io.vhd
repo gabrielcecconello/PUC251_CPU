@@ -4,7 +4,7 @@ USE ieee.std_logic_unsigned.all;
 
 ENTITY port_io IS 
 	GENERIC (
-		base_addr : std_logic_vector(7 downto 0)
+		base_addr : std_logic_vector(7 downto 0) := x"00"
 	);
 
 	PORT (
