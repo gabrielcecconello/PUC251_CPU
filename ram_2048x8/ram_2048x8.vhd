@@ -1,6 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
+USE ieee.std_logic_arith.all;
 
 ENTITY ram_2048x8 IS 
 	PORT (
@@ -22,11 +23,11 @@ BEGIN
 			memory <= (others => (others => '0'));
 		ELSIF RISING_EDGE(clk_in) THEN
 			IF mem_wr_en = '1' THEN	
-				memory(addr) <= dio;
+				memory(conv_integer(addr)) <= dio;
 			END IF;
 		END IF;
 	END PROCESS;
 	
 	-- Lógica combinacional para leitura.
-	dio <= memory(addr) WHEN mem_rd_en = '1' ELSE (others => 'Z');
+	dio <= memory(conv_integer(addr)) WHEN mem_rd_en = '1' ELSE (others => 'Z');
 END arch;
