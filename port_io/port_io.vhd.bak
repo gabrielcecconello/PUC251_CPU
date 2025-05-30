@@ -4,7 +4,7 @@ USE ieee.std_logic_unsigned.all;
 
 ENTITY port_io IS 
 	GENERIC (
-		base_addr : std_logic_vector(7 downto 0)
+		base_addr : std_logic_vector(7 downto 0) := x"00"
 	);
 
 	PORT (
@@ -36,13 +36,25 @@ BEGIN
 		END IF;
 	END PROCESS;
 	
-	-- Lógica concorrente de leitura.
-	dbus <= latch WHEN rd_en = '1' AND abus = base_addr ELSE
-			dir_reg WHEN rd_en = '1' AND abus = base_addr + "00000001" ELSE (others => 'Z');
+	-- Lógica combinacional de leitura.
+	PROCESS(all)
+	BEGIN
+		IF rd_en = '1' THEN	
+			IF abus = base_addr THEN
+				dbus <= latch;
+			ELSIF abus = base_addr + "00000001" THEN
+				dbus <= dir_reg;
+			ELSE 
+				dbus <= (others => 'Z');
+			END IF;
+		ELSE 
+			dbus <= (others => 'Z');
+		END IF;
+	END PROCESS;
 	
 	-- Lógica concorrente para a porta se utilizando de 'generate'.	
 	gen_io: FOR i IN 0 TO 7 GENERATE
 		port_io(i) <= port_reg(i) WHEN dir_reg(i) = '1' ELSE 'Z';
-		latch(i) <= port_io(i) WHEN dir_reg(i) = '0';
+		latch(i) <= port_io(i) WHEN dir_reg(i) = '0' ELSE latch(i);
 	END GENERATE;	
 END arch;

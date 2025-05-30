@@ -20,11 +20,11 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/ram_2048x8/ram_2048x8.vwf")
+VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/ram_2048x8/ram_2048x8.vwf")
 {
 	ZOOM{
-		ZBEGIN = 32800;
-		ZEND = 82000;
+		ZBEGIN = 69309;
+		ZEND = 191815;
 		NUMERATOR = 947;
 		DENOMINATOR = 49200;
 		TOP_INDEX = 0;

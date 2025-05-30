@@ -36,13 +36,36 @@ BEGIN
 		END IF;
 	END PROCESS;
 	
-	-- Lógica concorrente de leitura.
-	dbus <= latch WHEN rd_en = '1' AND abus = base_addr ELSE
-			dir_reg WHEN rd_en = '1' AND abus = base_addr + "00000001" ELSE (others => 'Z');
+	-- Lógica combinacional de leitura.
+	PROCESS(all)
+	BEGIN
+		IF rd_en = '1' THEN	
+			IF abus = base_addr THEN
+				dbus <= latch;
+			ELSIF abus = base_addr + "00000001" THEN
+				dbus <= dir_reg;
+			ELSE 
+				dbus <= (others => 'Z');
+			END IF;
+		ELSE 
+			dbus <= (others => 'Z');
+		END IF;
+	END PROCESS;
+	
+	-- Latch captura valores da porta durante leitura da porta (abus = base_addr)
+	PROCESS(all)
+	BEGIN
+		IF rd_en = '1' AND abus = base_addr THEN
+			FOR i IN 0 TO 7 LOOP
+				IF dir_reg(i) = '0' THEN
+					latch(i) <= port_io(i);
+				END IF;
+			END LOOP;
+		END IF;
+	END PROCESS;
 	
 	-- Lógica concorrente para a porta se utilizando de 'generate'.	
 	gen_io: FOR i IN 0 TO 7 GENERATE
 		port_io(i) <= port_reg(i) WHEN dir_reg(i) = '1' ELSE 'Z';
-		latch(i) <= port_io(i) WHEN dir_reg(i) = '0';
 	END GENERATE;	
 END arch;
