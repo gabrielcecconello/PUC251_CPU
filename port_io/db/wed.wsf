@@ -20,11 +20,11 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port_io.vwf")
+VECTOR("C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/port_io/port_io.vwf")
 {
 	ZOOM{
-		ZBEGIN = 17500;
-		ZEND = 104850;
+		ZBEGIN = 59329;
+		ZEND = 157940;
 		NUMERATOR = 1969;
 		DENOMINATOR = 87350;
 		TOP_INDEX = 39;
@@ -502,15 +502,15 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dbus[0]~result";
+		SIGNAL = "dbus~result";
 		INDEX = 58;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dbus[1]~result";
+		SIGNAL = "dbus[7]~result";
 		INDEX = 59;
 		FORMAT = E;
 		SCALE = 1;
@@ -518,7 +518,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dbus[2]~result";
+		SIGNAL = "dbus[6]~result";
 		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
@@ -526,7 +526,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dbus[3]~result";
+		SIGNAL = "dbus[5]~result";
 		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
@@ -542,7 +542,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dbus[5]~result";
+		SIGNAL = "dbus[3]~result";
 		INDEX = 63;
 		FORMAT = E;
 		SCALE = 1;
@@ -550,7 +550,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dbus[6]~result";
+		SIGNAL = "dbus[2]~result";
 		INDEX = 64;
 		FORMAT = E;
 		SCALE = 1;
@@ -558,7 +558,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dbus[7]~result";
+		SIGNAL = "dbus[1]~result";
 		INDEX = 65;
 		FORMAT = E;
 		SCALE = 1;
@@ -566,7 +566,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[0]~result";
+		SIGNAL = "dbus[0]~result";
 		INDEX = 66;
 		FORMAT = E;
 		SCALE = 1;
@@ -574,15 +574,15 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[1]~result";
+		SIGNAL = "port_io~result";
 		INDEX = 67;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[2]~result";
+		SIGNAL = "port_io[7]~result";
 		INDEX = 68;
 		FORMAT = E;
 		SCALE = 1;
@@ -590,7 +590,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[3]~result";
+		SIGNAL = "port_io[6]~result";
 		INDEX = 69;
 		FORMAT = E;
 		SCALE = 1;
@@ -598,7 +598,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[4]~result";
+		SIGNAL = "port_io[5]~result";
 		INDEX = 70;
 		FORMAT = E;
 		SCALE = 1;
@@ -606,7 +606,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[5]~result";
+		SIGNAL = "port_io[4]~result";
 		INDEX = 71;
 		FORMAT = E;
 		SCALE = 1;
@@ -614,7 +614,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[6]~result";
+		SIGNAL = "port_io[3]~result";
 		INDEX = 72;
 		FORMAT = E;
 		SCALE = 1;
@@ -622,8 +622,24 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "port_io[7]~result";
+		SIGNAL = "port_io[2]~result";
 		INDEX = 73;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "port_io[1]~result";
+		INDEX = 74;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "port_io[0]~result";
+		INDEX = 75;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

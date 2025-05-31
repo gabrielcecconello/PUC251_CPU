@@ -79,6 +79,7 @@ wr_en => dir_reg[3].ENA
 wr_en => dir_reg[2].ENA
 wr_en => dir_reg[1].ENA
 wr_en => dir_reg[0].ENA
+rd_en => process_2~0.IN1
 rd_en => dbus[7]~16.IN1
 
 
