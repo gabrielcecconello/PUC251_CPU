@@ -6,16 +6,16 @@ ENTITY ALU IS
 	PORT (
 		a_in, b_in: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		c_in: IN STD_LOGIC;
-		op: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		r: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-		c_out, z, v: OUT STD_LOGIC
+		op_sel: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		r_out: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		c_out, z_out, v_out: OUT STD_LOGIC
 	);
 END ENTITY;
 
 ARCHITECTURE arch OF ALU IS
 	SIGNAL whole: STD_LOGIC_VECTOR(8 DOWNTO 0);
 BEGIN
-	WITH op SELECT
+	WITH op_sel SELECT
 		whole <= ('0' & a_in) + ('0' & b_in) WHEN "0000", -- ADD
 				 ('0' & a_in) + ('0' & b_in) + ("00000000" & c_in) WHEN "0001", -- ADDC
 				 ('0' & a_in) - ('0' & b_in) WHEN "0010", -- SUB
@@ -34,12 +34,12 @@ BEGIN
 				 '0' & b_in WHEN "1111", -- PASS_B
 				 (others => '0') WHEN OTHERS;
 		
-	r <= whole(7 DOWNTO 0);
+	r_out <= whole(7 DOWNTO 0);
 	c_out <= whole(8);
-	z <= '1' WHEN whole(7 DOWNTO 0) = "00000000" ELSE '0';
+	z_out <= '1' WHEN whole(7 DOWNTO 0) = "00000000" ELSE '0';
 		
-	WITH op SELECT
-		v <= (a_in(7) AND b_in(7) AND NOT whole(7)) OR
+	WITH op_sel SELECT
+		v_out <= (a_in(7) AND b_in(7) AND NOT whole(7)) OR
 			 (NOT a_in(7) AND NOT b_in(7) AND whole(7)) WHEN "0000", -- ADD
 			 (a_in(7) AND b_in(7) AND NOT whole(7)) OR
 			 (NOT a_in(7) AND NOT b_in(7) AND whole(7)) WHEN "0001", -- ADDC
