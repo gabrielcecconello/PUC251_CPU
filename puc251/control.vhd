@@ -1,0 +1,74 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+USE ieee.std_logic_arith.all;
+
+ENTITY control IS 
+	PORT (
+		opcode: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		clk, nrst: IN STD_LOGIC;
+		c_flag, z_flag, v_flag: IN STD_LOGIC
+		
+		Wreg_on_dext: OUT STD_LOGIC;
+		reg_di_sel: OUT STD_LOGIC;
+		alu_a_in_sel: OUT STD_LOGIC;
+		alu_to_gpio_sel: OUT STD_LOGIC;
+		reg_wr_ena: OUT STD_LOGIC;
+		Wreg_wr_ena: OUT STD_LOGIC;
+		Sel_RA_ou_Wreg: OUT STD_LOGIC;
+		Men_to_Wreg_sel: OUT STD_LOGIC;
+		
+		flag_c_wr_ena, flag_z_wr_ena, flag_v_wr_ena: OUT STD_LOGIC;
+		stack_push, stack_pop: OUT STD_LOGIC;
+		mem_wr_ena, mem_rd_ena: OUT STD_LOGIC;
+		inp, outp: OUT STD_LOGIC;
+		
+		alu_op: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		pc_ctrl: OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+	);
+END ENTITY;
+
+ARCHITECTURE arch OF control IS
+	TYPE state_type IS (rst, fetch, fet_dec_ex);
+	SIGNAL pres_state, next_state: state_type;
+BEGIN
+	PROCESS(nrst, clk)
+	BEGIN
+		IF nrst = '0' THEN
+			pres_state <= rst;
+		ELSIF RISING_EDGE(CLK) THEN
+			pres_state <= next_state;
+		END IF;
+	END PROCESS;
+	
+	PROCESS(nrst, pres_state, opcode)
+	BEGIN
+		Wreg_on_dext <= '0';
+		reg_di_sel <= '0';
+		alu_a_in_sel <= '0';
+		alu_to_gpio_sel <= '0';
+		reg_wr_ena <= '0';
+		Wreg_wr_ena <= '0';
+		Sel_RA_ou_Wreg <= '0';
+		Men_to_Wreg_sel <= '0';
+		
+		flag_c_wr_ena <= '0';
+		flag_z_wr_ena <= '0';
+		flag_v_wr_ena <= '0';
+		stack_push <= '0';
+		stack_pop <= '0';
+		mem_wr_ena <= '0';
+		mem_rd_ena <= '0';
+		
+		alu_op <= '----';
+		pc_ctrl <= '--';
+		
+		CASE pres_state IS
+			WHEN rst =>
+				next_state <= fetch;
+			
+			WHEN fetch =>
+				next_state <= fet_dec_ex;
+				
+		
+END arch;
