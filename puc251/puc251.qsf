@@ -48,4 +48,6 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VHDL_FILE control.vhd
 set_global_assignment -name BDF_FILE puc251.bdf
+set_global_assignment -name MIF_FILE puc251.mif

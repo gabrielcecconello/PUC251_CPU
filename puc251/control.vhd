@@ -60,8 +60,8 @@ BEGIN
 		mem_wr_ena <= '0';
 		mem_rd_ena <= '0';
 		
-		alu_op <= '----';
-		pc_ctrl <= '--';
+		alu_op <= "----";
+		pc_ctrl <= "--";
 		
 		CASE pres_state IS
 			WHEN rst =>
@@ -69,6 +69,49 @@ BEGIN
 			
 			WHEN fetch =>
 				next_state <= fet_dec_ex;
+				pc_ctrl <= "11";
+			
+			WHEN fet_dec_ex =>
+				CASE opcode(7 DOWNTO 6) IS
+					-- ALU e dois registradores
+					WHEN "00" =>
+						CASE opcode(5 DOWNTO 3) IS
+							WHEN "000" | "001" | "010" | "011" => 
+								flag_v_wr_ena <= '1';
+							WHEN OTHERS => NULL;
+						END CASE;
+						IF opcode(0) = '1' THEN
+							reg_wr_ena <= '1';
+							reg_di_sel <= '1';
+						ELSE THEN
+							Wreg_wr_ena <= '1';
+						END IF;
+						flag_c_wr_ena <= '1';
+						flag_z_wr_ena <= '1';
+						pc_ctrl <= "11";
+						next_case <= fet_dec_ex;
+								
+					-- ALU, um registrador e um imediato
+					WHEN "01" =>
+					
+					-- ALU e um registrador
+					WHEN "10" =>
 				
-		
+				END CASE;
+				
+				CASE opcode(7 DOWNTO 5) IS
+					-- Memória e I/O
+					WHEN "110" =>
+				END CASE;
+				
+				CASE opcode(7 DOWNTO 4) IS
+					-- Desvios Incondicionais e Condicionais
+					WHEN "1110" =>
+				END CASE;
+					
+				CASE opcode(7 DOWNTO 3) IS
+					-- Desvios Incondicionais
+					WHEN "11110" =>
+				END CASE;
+		END CASE;
 END arch;

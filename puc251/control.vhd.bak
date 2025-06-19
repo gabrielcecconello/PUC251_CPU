@@ -29,21 +29,73 @@ ENTITY control IS
 END ENTITY;
 
 ARCHITECTURE arch OF control IS
-	TYPE ram_array IS ARRAY (0 TO 2047) OF STD_LOGIC_VECTOR(7 DOWNTO 0);
-	SIGNAL memory : ram_array;
+	TYPE state_type IS (rst, fetch, fet_dec_ex);
+	SIGNAL pres_state, next_state: state_type;
 BEGIN
-	-- Lógica sequencial para escrita.
-	PROCESS(clk_in, nrst)
+	PROCESS(nrst, clk)
 	BEGIN
 		IF nrst = '0' THEN
-			memory <= (others => (others => '0'));
-		ELSIF RISING_EDGE(clk_in) THEN
-			IF mem_wr_en = '1' THEN	
-				memory(conv_integer(addr)) <= dio;
-			END IF;
+			pres_state <= rst;
+		ELSIF RISING_EDGE(CLK) THEN
+			pres_state <= next_state;
 		END IF;
 	END PROCESS;
 	
-	-- Lógica combinacional para leitura.
-	dio <= memory(conv_integer(addr)) WHEN mem_rd_en = '1' ELSE (others => 'Z');
+	PROCESS(nrst, pres_state, opcode)
+	BEGIN
+		Wreg_on_dext <= '0';
+		reg_di_sel <= '0';
+		alu_a_in_sel <= '0';
+		alu_to_gpio_sel <= '0';
+		reg_wr_ena <= '0';
+		Wreg_wr_ena <= '0';
+		Sel_RA_ou_Wreg <= '0';
+		Men_to_Wreg_sel <= '0';
+		
+		flag_c_wr_ena <= '0';
+		flag_z_wr_ena <= '0';
+		flag_v_wr_ena <= '0';
+		stack_push <= '0';
+		stack_pop <= '0';
+		mem_wr_ena <= '0';
+		mem_rd_ena <= '0';
+		
+		alu_op <= "----";
+		pc_ctrl <= "--";
+		
+		CASE pres_state IS
+			WHEN rst =>
+				next_state <= fetch;
+			
+			WHEN fetch =>
+				next_state <= fet_dec_ex;
+				pc_ctrl <= "11";
+			
+			WHEN fet_dec_ex =>
+				CASE opcode(7 DOWNTO 6) IS
+					WHEN "00" =>
+						pc_ctrl <= "11";
+						CASE opcode(5 DOWNTO 3) IS
+							WHEN "000" | "001" | "010" | "011" => 
+								flag_c_wr_ena <= '1';
+						END CASE;
+								
+					WHEN "01" =>
+					
+					WHEN "10" =>
+				
+				END CASE;
+				
+				CASE opcode(7 DOWNTO 5) IS
+					WHEN "110" =>
+				END CASE;
+				
+				CASE opcode(7 DOWNTO 4) IS
+					WHEN "1110" =>
+				END CASE;
+					
+				CASE opcode(7 DOWNTO 3) IS
+					WHEN "11110" =>
+				END CASE;
+		END CASE;
 END arch;
