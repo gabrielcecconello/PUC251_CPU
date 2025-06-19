@@ -59,6 +59,7 @@ BEGIN
 		stack_pop <= '0';
 		mem_wr_ena <= '0';
 		mem_rd_ena <= '0';
+		inp, outp <= '0';
 		
 		alu_op <= "----";
 		pc_ctrl <= "--";
@@ -73,28 +74,90 @@ BEGIN
 			
 			WHEN fet_dec_ex =>
 				CASE opcode(7 DOWNTO 6) IS
-					WHEN "00" =>
-						pc_ctrl <= "11";
+					-- ALU e dois registradores | ALU, um registrador e um imediato
+					WHEN "00" | "01" =>
 						CASE opcode(5 DOWNTO 3) IS
 							WHEN "000" | "001" | "010" | "011" => 
-								flag_c_wr_ena <= '1';
+								flag_v_wr_ena <= '1';
+							WHEN OTHERS => NULL;
 						END CASE;
-								
-					WHEN "01" =>
+						CASE opcode(5 DOWNTO 3) IS
+							WHEN "000" => alu_op <= "0000";
+							WHEN "001" => alu_op <= "0001";
+							WHEN "010" => alu_op <= "0010";
+							WHEN "011" => alu_op <= "0011";
+							WHEN "100" => alu_op <= "0100";
+							WHEN "101" => alu_op <= "0101";
+							WHEN "110" => alu_op <= "0110";
+							WHEN "111" => alu_op <= "1111";
+							WHEN OTHERS => NULL;
+						END CASE;
+						IF opcode(0) = '1' THEN
+							reg_wr_ena <= '1';
+							reg_di_sel <= '1';
+						ELSE THEN
+							Wreg_wr_ena <= '1';
+						END IF;
+						IF opcode(7 DOWNTO 6) = "01" THEN
+							alu_a_in_sel <= '1';
+						END IF;
+						flag_c_wr_ena <= '1';
+						flag_z_wr_ena <= '1';
+						pc_ctrl <= "11";
+						next_case <= fet_dec_ex;
 					
+					-- ALU e um registrador
 					WHEN "10" =>
+						CASE opcode(5 DOWNTO 3) IS
+							WHEN "000" => alu_op <= "1000";
+							WHEN "001" => alu_op <= "1001";
+							WHEN "010" => alu_op <= "1010";
+							WHEN "011" => alu_op <= "1011";
+							WHEN "100" => alu_op <= "1100";
+							WHEN "101" => alu_op <= "1101";
+							WHEN "110" => alu_op <= "1110";
+							WHEN "111" => alu_op <= "0111";
+							WHEN OTHERS => NULL;
+						END CASE;
+						IF opcode(0) = '1' THEN
+							reg_wr_ena <= '1';
+							reg_di_sel <= '1';
+						ELSE THEN
+							Wreg_wr_ena <= '1';
+						END IF;
+						flag_c_wr_ena <= '1';
+						flag_z_wr_ena <= '1';
+						pc_ctrl <= "11";
+						next_case <= fet_dec_ex;
 				
 				END CASE;
 				
 				CASE opcode(7 DOWNTO 5) IS
+					-- Memória e I/O
 					WHEN "110" =>
+						CASE opcode(4 DOWNTO 3) IS
+							WHEN "00" =>
+								
+							
+							WHEN "10" =>
+								inp <= '1';
+								IF opcode(0) = '1' THEN
+									reg_wr_ena <= '1';
+								ELSE THEN
+									Wreg_wr_ena <= '1';
+									Men_to_Wreg_sel <= '1';
+							WHEN "11" =>
+								outp <= '1';
+								
 				END CASE;
 				
 				CASE opcode(7 DOWNTO 4) IS
+					-- Desvios Incondicionais 
 					WHEN "1110" =>
 				END CASE;
 					
 				CASE opcode(7 DOWNTO 3) IS
+					-- Desvios Condicionais e retorno
 					WHEN "11110" =>
 				END CASE;
 		END CASE;
