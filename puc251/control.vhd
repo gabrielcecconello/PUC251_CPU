@@ -104,7 +104,7 @@ BEGIN
 						flag_c_wr_ena <= '1';
 						flag_z_wr_ena <= '1';
 						pc_ctrl <= "11";
-						next_case <= fet_dec_ex;
+						next_state <= fet_dec_ex;
 					
 					-- ALU e um registrador
 					WHEN "10" =>
@@ -128,17 +128,20 @@ BEGIN
 						flag_c_wr_ena <= '1';
 						flag_z_wr_ena <= '1';
 						pc_ctrl <= "11";
-						next_case <= fet_dec_ex;
-				
+						next_state <= fet_dec_ex;
 				END CASE;
 				
 				CASE opcode(7 DOWNTO 5) IS
-					-- Memória e I/O
+					-- Memï¿½ria e I/O
 					WHEN "110" =>
 						CASE opcode(4 DOWNTO 3) IS
 							WHEN "00" =>
-								
-							
+								mem_rd_ena <= '1';
+								Wreg_wr_ena <= '1';
+								Men_to_Wreg_sel <= '1';
+							WHEN "01" =>
+								mem_wr_ena <= '1';
+								Wreg_on_dext <= '0';
 							WHEN "10" =>
 								inp <= '1';
 								IF opcode(0) = '1' THEN
@@ -146,20 +149,62 @@ BEGIN
 								ELSE THEN
 									Wreg_wr_ena <= '1';
 									Men_to_Wreg_sel <= '1';
+								END IF;
 							WHEN "11" =>
 								outp <= '1';
 								IF opcode(0) = '1' THEN
 									reg_wr_ena <= '1';
+								ELSE THEN
+									Wreg_wr_ena <= '1';
+									-- TODO: ainda a preencher
+								END IF;
+							pc_ctrl <= "11";
+							next_state <= fet_dec_ex;
+						END CASE;
 				END CASE;
 				
 				CASE opcode(7 DOWNTO 4) IS
 					-- Desvios Incondicionais 
 					WHEN "1110" =>
+						IF opcode(3) = '1' THEN
+							stack_push <= '0';
+						END IF;
+						pc_ctrl <= "01";
+						next_state <= fet_dec_ex;
 				END CASE;
 					
 				CASE opcode(7 DOWNTO 3) IS
 					-- Desvios Condicionais e retorno
 					WHEN "11110" =>
+						CASE opcode(2 DOWNTO 1) IS
+							WHEN "00" =>
+								IF c_flag = '1' THEN
+									pc_ctrl <= "01";
+									next_state <= fetch;
+								ELSE THEN
+									pc_ctrl <= "11";
+									next_state <= fet_dec_ex;
+								END IF;
+							WHEN "01" =>
+								IF z_flag = '1' THEN
+									pc_ctrl <= "01";
+									next_state <= fetch;
+								ELSE THEN
+									pc_ctrl <= "11";
+									next_state <= fet_dec_ex;
+								END IF;
+							WHEN "10" =>
+								IF v_flag = '1' THEN
+									pc_ctrl <= "01";
+									next_state <= fetch;
+								ELSE THEN
+									pc_ctrl <= "11";
+									next_state <= fet_dec_ex;
+								END IF;
+							WHEN "11" =>
+								pc_ctrl <= "10";
+								stack_pop <= "1";
+						END CASE;
 				END CASE;
 		END CASE;
 END arch;
