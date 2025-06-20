@@ -62,7 +62,7 @@ BEGIN
 		inp, outp <= '0';
 		
 		alu_op <= "----";
-		pc_ctrl <= "--";
+		pc_ctrl <= "00";
 		
 		CASE pres_state IS
 			WHEN rst =>
@@ -141,7 +141,7 @@ BEGIN
 								Men_to_Wreg_sel <= '1';
 							WHEN "01" =>
 								mem_wr_ena <= '1';
-								Wreg_on_dext <= '0';
+								Wreg_on_dext <= '1';
 							WHEN "10" =>
 								inp <= '1';
 								IF opcode(0) = '1' THEN
@@ -153,10 +153,9 @@ BEGIN
 							WHEN "11" =>
 								outp <= '1';
 								IF opcode(0) = '1' THEN
-									reg_wr_ena <= '1';
+									alu_op <= "1111";
 								ELSE THEN
-									Wreg_wr_ena <= '1';
-									-- TODO: ainda a preencher
+									Wreg_on_dext <= '1';
 								END IF;
 							pc_ctrl <= "11";
 							next_state <= fet_dec_ex;
