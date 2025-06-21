@@ -7,7 +7,7 @@ ENTITY control IS
 	PORT (
 		opcode: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		clk, nrst: IN STD_LOGIC;
-		c_flag, z_flag, v_flag: IN STD_LOGIC
+		c_flag, z_flag, v_flag: IN STD_LOGIC;
 		
 		Wreg_on_dext: OUT STD_LOGIC;
 		reg_di_sel: OUT STD_LOGIC;
@@ -24,7 +24,7 @@ ENTITY control IS
 		inp, outp: OUT STD_LOGIC;
 		
 		alu_op: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		pc_ctrl: OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		pc_ctrl: OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
 	);
 END ENTITY;
 
@@ -59,7 +59,8 @@ BEGIN
 		stack_pop <= '0';
 		mem_wr_ena <= '0';
 		mem_rd_ena <= '0';
-		inp, outp <= '0';
+		inp <= '0';
+		outp <= '0';
 		
 		alu_op <= "----";
 		pc_ctrl <= "00";
@@ -95,7 +96,7 @@ BEGIN
 						IF opcode(0) = '1' THEN
 							reg_wr_ena <= '1';
 							reg_di_sel <= '1';
-						ELSE THEN
+						ELSE
 							Wreg_wr_ena <= '1';
 						END IF;
 						IF opcode(7 DOWNTO 6) = "01" THEN
@@ -122,7 +123,7 @@ BEGIN
 						IF opcode(0) = '1' THEN
 							reg_wr_ena <= '1';
 							reg_di_sel <= '1';
-						ELSE THEN
+						ELSE
 							Wreg_wr_ena <= '1';
 						END IF;
 						flag_c_wr_ena <= '1';
@@ -146,7 +147,7 @@ BEGIN
 								inp <= '1';
 								IF opcode(0) = '1' THEN
 									reg_wr_ena <= '1';
-								ELSE THEN
+								ELSE
 									Wreg_wr_ena <= '1';
 									Men_to_Wreg_sel <= '1';
 								END IF;
@@ -154,7 +155,7 @@ BEGIN
 								outp <= '1';
 								IF opcode(0) = '1' THEN
 									alu_op <= "1111";
-								ELSE THEN
+								ELSE
 									Wreg_on_dext <= '1';
 								END IF;
 							pc_ctrl <= "11";
@@ -180,7 +181,7 @@ BEGIN
 								IF c_flag = '1' THEN
 									pc_ctrl <= "01";
 									next_state <= fetch;
-								ELSE THEN
+								ELSE
 									pc_ctrl <= "11";
 									next_state <= fet_dec_ex;
 								END IF;
@@ -188,7 +189,7 @@ BEGIN
 								IF z_flag = '1' THEN
 									pc_ctrl <= "01";
 									next_state <= fetch;
-								ELSE THEN
+								ELSE
 									pc_ctrl <= "11";
 									next_state <= fet_dec_ex;
 								END IF;
@@ -196,14 +197,17 @@ BEGIN
 								IF v_flag = '1' THEN
 									pc_ctrl <= "01";
 									next_state <= fetch;
-								ELSE THEN
+								ELSE
 									pc_ctrl <= "11";
 									next_state <= fet_dec_ex;
 								END IF;
 							WHEN "11" =>
 								pc_ctrl <= "10";
-								stack_pop <= "1";
+								stack_pop <= '1';
 						END CASE;
+					WHEN "11111" =>
+						pc_ctrl <= "11";
 				END CASE;
 		END CASE;
+	END PROCESS;
 END arch;
