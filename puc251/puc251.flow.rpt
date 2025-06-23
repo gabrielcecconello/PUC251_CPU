@@ -1,5 +1,5 @@
 Flow report for puc251
-Fri Jun 20 23:03:19 2025
+Sun Jun 22 23:48:28 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Flow Failed - Fri Jun 20 23:03:19 2025       ;
+; Flow Status                        ; Successful - Sun Jun 22 23:48:28 2025        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; puc251                                       ;
 ; Top-level Entity Name              ; puc251                                       ;
@@ -46,15 +46,15 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; N/A                                          ;
-; Total logic elements               ; N/A until Partition Merge                    ;
-;     Total combinational functions  ; N/A until Partition Merge                    ;
-;     Dedicated logic registers      ; N/A until Partition Merge                    ;
-; Total registers                    ; N/A until Partition Merge                    ;
-; Total pins                         ; N/A until Partition Merge                    ;
-; Total virtual pins                 ; N/A until Partition Merge                    ;
-; Total memory bits                  ; N/A until Partition Merge                    ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                    ;
-; Total PLLs                         ; N/A until Partition Merge                    ;
+; Total logic elements               ; 29,849                                       ;
+;     Total combinational functions  ; 13,420                                       ;
+;     Dedicated logic registers      ; 16,558                                       ;
+; Total registers                    ; 16558                                        ;
+; Total pins                         ; 75                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 32,768                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
 +------------------------------------+----------------------------------------------+
 
 
@@ -63,24 +63,24 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/20/2025 23:03:18 ;
+; Start date & time ; 06/22/2025 23:47:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; puc251              ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                 ;
-+------------------------------------+------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                        ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 925251820839.175047139822428 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                           ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                            ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                     ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                       ; --            ; --          ; Top            ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                          ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                    ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 233497588888768.175064686904388 ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -88,8 +88,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 240 MB              ; 00:00:00                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 308 MB              ; 00:00:39                           ;
+; Total                ; 00:00:38     ; --                      ; --                  ; 00:00:39                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -98,7 +98,7 @@ applicable agreement for further details.
 +----------------------+------------------+---------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +----------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis ; ProjetoDeTablet  ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; Compuiter        ; Windows Vista ; 6.2        ; x86_64         ;
 +----------------------+------------------+---------------+------------+----------------+
 
 

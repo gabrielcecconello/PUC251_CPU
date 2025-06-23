@@ -41,7 +41,7 @@ BEGIN
 		END IF;
 	END PROCESS;
 	
-	PROCESS(nrst, pres_state, opcode)
+	PROCESS(nrst, pres_state, opcode, c_flag, z_flag, v_flag)
 	BEGIN
 		Wreg_on_dext <= '0';
 		reg_di_sel <= '0';
@@ -130,6 +130,7 @@ BEGIN
 						flag_z_wr_ena <= '1';
 						pc_ctrl <= "11";
 						next_state <= fet_dec_ex;
+					WHEN OTHERS => NULL;
 				END CASE;
 				
 				CASE opcode(7 DOWNTO 5) IS
@@ -161,16 +162,18 @@ BEGIN
 							pc_ctrl <= "11";
 							next_state <= fet_dec_ex;
 						END CASE;
+					WHEN OTHERS => NULL;
 				END CASE;
 				
 				CASE opcode(7 DOWNTO 4) IS
 					-- Desvios Incondicionais 
 					WHEN "1110" =>
 						IF opcode(3) = '1' THEN
-							stack_push <= '0';
+							stack_push <= '1';
 						END IF;
 						pc_ctrl <= "01";
 						next_state <= fet_dec_ex;
+					WHEN OTHERS => NULL;
 				END CASE;
 					
 				CASE opcode(7 DOWNTO 3) IS
@@ -204,9 +207,11 @@ BEGIN
 							WHEN "11" =>
 								pc_ctrl <= "10";
 								stack_pop <= '1';
+							WHEN OTHERS => NULL;
 						END CASE;
 					WHEN "11111" =>
 						pc_ctrl <= "11";
+					WHEN OTHERS => NULL;
 				END CASE;
 		END CASE;
 	END PROCESS;

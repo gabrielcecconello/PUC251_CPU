@@ -48,12 +48,20 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name VHDL_FILE control.vhd
-set_global_assignment -name BDF_FILE puc251.bdf
-set_global_assignment -name MIF_FILE puc251.mif
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name VHDL_FILE lpm_rom0.vhd
+set_global_assignment -name VHDL_FILE ../stack/stack.vhd
+set_global_assignment -name VHDL_FILE ../prog_cnt/prog_cnt.vhd
+set_global_assignment -name VHDL_FILE ../Wreg/Wreg.vhd
+set_global_assignment -name VHDL_FILE ../reg_bank/reg_bank.vhd
+set_global_assignment -name VHDL_FILE ../ALU/ALU.vhd
+set_global_assignment -name VHDL_FILE ../port_io/port_io.vhd
+set_global_assignment -name VHDL_FILE ../ram_2048x8/ram_2048x8.vhd
+set_global_assignment -name VHDL_FILE control.vhd
+set_global_assignment -name BDF_FILE puc251.bdf
+set_global_assignment -name MIF_FILE puc251.mif
 set_global_assignment -name VHDL_FILE display.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
