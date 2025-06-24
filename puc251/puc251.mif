@@ -18,8 +18,19 @@ WIDTH=16;
 DEPTH=2048;
 
 ADDRESS_RADIX=UNS;
-DATA_RADIX=UNS;
+DATA_RADIX=HEX;
 
 CONTENT BEGIN
-	[0..2047]  :   0;
+	0     :   78FF;
+	1     :   D801;
+	2     :   7801;
+	3     :   D800;
+	4     :   D002;
+	5     :   6001;
+	6     :   F200;
+	7     :   E00A;
+	8     :   A000;
+	9     :   E00B;
+	10    :   A800;
+	[11..2047]  :   0000;
 END;

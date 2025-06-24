@@ -172,7 +172,7 @@ BEGIN
 							stack_push <= '1';
 						END IF;
 						pc_ctrl <= "01";
-						next_state <= fet_dec_ex;
+						next_state <= fetch;
 					WHEN OTHERS => NULL;
 				END CASE;
 					
@@ -182,28 +182,25 @@ BEGIN
 						CASE opcode(2 DOWNTO 1) IS
 							WHEN "00" =>
 								IF c_flag = '1' THEN
-									pc_ctrl <= "01";
 									next_state <= fetch;
 								ELSE
-									pc_ctrl <= "11";
 									next_state <= fet_dec_ex;
 								END IF;
+								pc_ctrl <= "11";
 							WHEN "01" =>
 								IF z_flag = '1' THEN
-									pc_ctrl <= "01";
 									next_state <= fetch;
 								ELSE
-									pc_ctrl <= "11";
 									next_state <= fet_dec_ex;
 								END IF;
+								pc_ctrl <= "11";
 							WHEN "10" =>
 								IF v_flag = '1' THEN
-									pc_ctrl <= "01";
 									next_state <= fetch;
 								ELSE
-									pc_ctrl <= "11";
 									next_state <= fet_dec_ex;
 								END IF;
+								pc_ctrl <= "11";
 							WHEN "11" =>
 								pc_ctrl <= "10";
 								stack_pop <= '1';

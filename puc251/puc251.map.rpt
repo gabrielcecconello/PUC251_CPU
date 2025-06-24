@@ -1,5 +1,5 @@
 Analysis & Synthesis report for puc251
-Sun Jun 22 23:48:28 2025
+Tue Jun 24 03:09:29 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -54,13 +54,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 22 23:48:28 2025        ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 24 03:09:29 2025        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; puc251                                       ;
 ; Top-level Entity Name              ; puc251                                       ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 29,849                                       ;
-;     Total combinational functions  ; 13,420                                       ;
+; Total logic elements               ; 29,845                                       ;
+;     Total combinational functions  ; 13,416                                       ;
 ;     Dedicated logic registers      ; 16,558                                       ;
 ; Total registers                    ; 16558                                        ;
 ; Total pins                         ; 75                                           ;
@@ -192,16 +192,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 29,849 ;
+; Estimated Total logic elements              ; 29,845 ;
 ;                                             ;        ;
-; Total combinational functions               ; 13420  ;
+; Total combinational functions               ; 13416  ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 11145  ;
-;     -- 3 input functions                    ; 2247   ;
-;     -- <=2 input functions                  ; 28     ;
+;     -- 4 input functions                    ; 11140  ;
+;     -- 3 input functions                    ; 2250   ;
+;     -- <=2 input functions                  ; 26     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 13392  ;
+;     -- normal mode                          ; 13388  ;
 ;     -- arithmetic mode                      ; 28     ;
 ;                                             ;        ;
 ; Total registers                             ; 16558  ;
@@ -212,7 +212,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total memory bits                           ; 32768  ;
 ; Maximum fan-out node                        ; clk    ;
 ; Maximum fan-out                             ; 16574  ;
-; Total fan-out                               ; 117883 ;
+; Total fan-out                               ; 117868 ;
 ; Average fan-out                             ; 3.92   ;
 +---------------------------------------------+--------+
 
@@ -222,26 +222,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers  ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
-; |puc251                                   ; 13420 (34)        ; 16558 (0)     ; 32768       ; 0            ; 0       ; 0         ; 75   ; 0            ; |puc251                                                                                ; work         ;
+; |puc251                                   ; 13416 (44)        ; 16558 (0)     ; 32768       ; 0            ; 0       ; 0         ; 75   ; 0            ; |puc251                                                                                ; work         ;
 ;    |ALU:inst|                             ; 93 (75)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst                                                                       ;              ;
 ;       |lpm_add_sub:Add0|                  ; 18 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst|lpm_add_sub:Add0                                                      ;              ;
 ;          |add_sub_rpi:auto_generated|     ; 18 (18)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst|lpm_add_sub:Add0|add_sub_rpi:auto_generated                           ;              ;
-;    |Wreg:inst2|                           ; 8 (8)             ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|Wreg:inst2                                                                     ;              ;
-;    |busmux:inst10|                        ; 24 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10                                                                  ;              ;
-;       |lpm_mux:$00000|                    ; 24 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000                                                   ;              ;
-;          |mux_smc:auto_generated|         ; 24 (24)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000|mux_smc:auto_generated                            ;              ;
+;    |Wreg:inst2|                           ; 8 (8)             ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|Wreg:inst2                                                                     ; work         ;
+;    |busmux:inst10|                        ; 24 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10                                                                  ; work         ;
+;       |lpm_mux:$00000|                    ; 24 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000                                                   ; work         ;
+;          |mux_smc:auto_generated|         ; 24 (24)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000|mux_smc:auto_generated                            ; work         ;
 ;    |busmux:inst7|                         ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7                                                                   ;              ;
 ;       |lpm_mux:$00000|                    ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000                                                    ;              ;
-;          |mux_smc:auto_generated|         ; 11 (11)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated                             ;              ;
-;    |control:inst14|                       ; 57 (57)           ; 3 (3)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|control:inst14                                                                 ; work         ;
+;          |mux_smc:auto_generated|         ; 11 (11)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated                             ; work         ;
+;    |control:inst14|                       ; 54 (54)           ; 3 (3)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|control:inst14                                                                 ; work         ;
 ;    |lpm_rom0:inst15|                      ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|lpm_rom0:inst15                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|lpm_rom0:inst15|altsyncram:altsyncram_component                                ;              ;
 ;          |altsyncram_0371:auto_generated| ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated ; work         ;
-;    |port_io:inst6|                        ; 31 (31)           ; 16 (16)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst6                                                                  ;              ;
-;    |port_io:inst8|                        ; 28 (28)           ; 16 (16)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst8                                                                  ;              ;
+;    |port_io:inst6|                        ; 31 (31)           ; 16 (16)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst6                                                                  ; work         ;
+;    |port_io:inst8|                        ; 28 (28)           ; 16 (16)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst8                                                                  ; work         ;
 ;    |prog_cnt:inst4|                       ; 33 (33)           ; 11 (11)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|prog_cnt:inst4                                                                 ; work         ;
-;    |ram_2048x8:inst5|                     ; 12996 (12996)     ; 16384 (16384) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ram_2048x8:inst5                                                               ;              ;
-;    |reg_bank:inst1|                       ; 16 (16)           ; 32 (32)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|reg_bank:inst1                                                                 ; work         ;
+;    |ram_2048x8:inst5|                     ; 12988 (12988)     ; 16384 (16384) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ram_2048x8:inst5                                                               ; work         ;
+;    |reg_bank:inst1|                       ; 13 (13)           ; 32 (32)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|reg_bank:inst1                                                                 ; work         ;
 ;    |stack:inst3|                          ; 89 (89)           ; 88 (88)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|stack:inst3                                                                    ; work         ;
 +-------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -273,25 +273,25 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+--------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal      ; Free of Timing Hazards ;
 +-----------------------------------------------------+--------------------------+------------------------+
-; control:inst14|next_state.fet_dec_ex_196            ; control:inst14|Selector8 ; yes                    ;
-; control:inst14|next_state.fetch_220                 ; control:inst14|Selector8 ; yes                    ;
-; port_io:inst8|latch[7]                              ; port_io:inst8|latch[7]   ; yes                    ;
-; port_io:inst6|latch[7]                              ; port_io:inst6|latch[7]   ; yes                    ;
-; port_io:inst8|latch[0]                              ; port_io:inst8|latch[0]   ; yes                    ;
-; port_io:inst6|latch[0]                              ; port_io:inst6|latch[0]   ; yes                    ;
-; port_io:inst8|latch[6]                              ; port_io:inst8|latch[6]   ; yes                    ;
-; port_io:inst6|latch[6]                              ; port_io:inst6|latch[6]   ; yes                    ;
-; port_io:inst8|latch[1]                              ; port_io:inst8|latch[1]   ; yes                    ;
-; port_io:inst6|latch[1]                              ; port_io:inst6|latch[1]   ; yes                    ;
-; port_io:inst8|latch[2]                              ; port_io:inst8|latch[2]   ; yes                    ;
-; port_io:inst6|latch[2]                              ; port_io:inst6|latch[2]   ; yes                    ;
-; port_io:inst8|latch[3]                              ; port_io:inst8|latch[3]   ; yes                    ;
-; port_io:inst6|latch[3]                              ; port_io:inst6|latch[3]   ; yes                    ;
+; control:inst14|next_state.fet_dec_ex_192            ; control:inst14|Selector8 ; yes                    ;
+; control:inst14|next_state.fetch_216                 ; control:inst14|Selector8 ; yes                    ;
 ; port_io:inst8|latch[4]                              ; port_io:inst8|latch[4]   ; yes                    ;
 ; port_io:inst6|latch[4]                              ; port_io:inst6|latch[4]   ; yes                    ;
+; port_io:inst8|latch[3]                              ; port_io:inst8|latch[3]   ; yes                    ;
+; port_io:inst6|latch[3]                              ; port_io:inst6|latch[3]   ; yes                    ;
+; port_io:inst8|latch[2]                              ; port_io:inst8|latch[2]   ; yes                    ;
+; port_io:inst6|latch[2]                              ; port_io:inst6|latch[2]   ; yes                    ;
+; port_io:inst8|latch[0]                              ; port_io:inst8|latch[0]   ; yes                    ;
+; port_io:inst6|latch[0]                              ; port_io:inst6|latch[0]   ; yes                    ;
+; port_io:inst8|latch[7]                              ; port_io:inst8|latch[7]   ; yes                    ;
+; port_io:inst6|latch[7]                              ; port_io:inst6|latch[7]   ; yes                    ;
+; port_io:inst8|latch[1]                              ; port_io:inst8|latch[1]   ; yes                    ;
+; port_io:inst6|latch[1]                              ; port_io:inst6|latch[1]   ; yes                    ;
 ; port_io:inst8|latch[5]                              ; port_io:inst8|latch[5]   ; yes                    ;
 ; port_io:inst6|latch[5]                              ; port_io:inst6|latch[5]   ; yes                    ;
-; control:inst14|next_state.rst_240                   ; control:inst14|Mux64     ; yes                    ;
+; port_io:inst8|latch[6]                              ; port_io:inst8|latch[6]   ; yes                    ;
+; port_io:inst6|latch[6]                              ; port_io:inst6|latch[6]   ; yes                    ;
+; control:inst14|next_state.rst_236                   ; control:inst14|Mux63     ; yes                    ;
 ; Number of user-specified and inferred latches = 19  ;                          ;                        ;
 +-----------------------------------------------------+--------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -318,15 +318,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |puc251|stack:inst3|R7[10]                                                 ;
-; 3:1                ; 77 bits   ; 154 LEs       ; 77 LEs               ; 77 LEs                 ; Yes        ; |puc251|stack:inst3|R4[10]                                                 ;
+; 3:1                ; 77 bits   ; 154 LEs       ; 77 LEs               ; 77 LEs                 ; Yes        ; |puc251|stack:inst3|R1[6]                                                  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |puc251|control:inst14|flag_v_wr_ena                                       ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |puc251|prog_cnt:inst4|Mux0                                                ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |puc251|control:inst14|inp                                                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |puc251|control:inst14|Mux33                                               ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |puc251|busmux:inst10|lpm_mux:$00000|mux_smc:auto_generated|result_node[0] ;
-; 12:1               ; 6 bits    ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; No         ; |puc251|ALU:inst|Mux2                                                      ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |puc251|prog_cnt:inst4|Mux10                                               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |puc251|control:inst14|mem_wr_ena                                          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |puc251|control:inst14|Mux34                                               ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |puc251|busmux:inst10|lpm_mux:$00000|mux_smc:auto_generated|result_node[4] ;
+; 12:1               ; 6 bits    ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; No         ; |puc251|ALU:inst|Mux6                                                      ;
 ; 1:1                ; 9 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |puc251|ALU:inst|Add1                                                      ;
-; 2048:1             ; 8 bits    ; 10920 LEs     ; 10920 LEs            ; 0 LEs                  ; No         ; |puc251|ram_2048x8:inst5|Mux7                                              ;
+; 2048:1             ; 8 bits    ; 10920 LEs     ; 10920 LEs            ; 0 LEs                  ; No         ; |puc251|ram_2048x8:inst5|Mux0                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
@@ -512,7 +512,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Jun 22 23:47:49 2025
+    Info: Processing started: Tue Jun 24 03:08:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off puc251 -c puc251
 Info: Found 2 design units, including 1 entities, in source file lpm_rom0.vhd
     Info: Found design unit 1: lpm_rom0-SYN
@@ -619,43 +619,43 @@ Info: Instantiated megafunction "ALU:inst|lpm_add_sub:Add0" with the following p
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_rpi.tdf
     Info: Found entity 1: add_sub_rpi
 Warning: Removed fan-outs from the following always-disabled I/O buffers
-    Warning: Removed fan-out from the always-disabled I/O buffer "inst12[7]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]"
-    Warning: Removed fan-out from the always-disabled I/O buffer "inst12[6]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]"
-    Warning: Removed fan-out from the always-disabled I/O buffer "inst12[5]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]"
     Warning: Removed fan-out from the always-disabled I/O buffer "inst12[4]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]"
     Warning: Removed fan-out from the always-disabled I/O buffer "inst12[3]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]"
     Warning: Removed fan-out from the always-disabled I/O buffer "inst12[2]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]"
     Warning: Removed fan-out from the always-disabled I/O buffer "inst12[1]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]"
     Warning: Removed fan-out from the always-disabled I/O buffer "inst12[0]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]"
+    Warning: Removed fan-out from the always-disabled I/O buffer "inst12[7]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]"
+    Warning: Removed fan-out from the always-disabled I/O buffer "inst12[5]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]"
+    Warning: Removed fan-out from the always-disabled I/O buffer "inst12[6]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]"
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
-    Warning: Converted the fan-out from the tri-state buffer "inst11[7]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst11[6]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "inst11[5]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "inst11[4]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "inst11[3]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "inst11[2]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "inst11[1]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "inst11[0]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]" into an OR gate
-Warning: Latch control:inst14|next_state.fet_dec_ex_196 has unsafe behavior
+    Warning: Converted the fan-out from the tri-state buffer "inst11[7]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "inst11[5]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "inst11[6]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]" into an OR gate
+Warning: Latch control:inst14|next_state.fet_dec_ex_192 has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal control:inst14|pres_state.fet_dec_ex
-Warning: Latch control:inst14|next_state.fetch_220 has unsafe behavior
+Warning: Latch control:inst14|next_state.fetch_216 has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[14]
-Warning: Latch control:inst14|next_state.rst_240 has unsafe behavior
+Warning: Latch control:inst14|next_state.rst_236 has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[14]
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "alu_to_gpio_sel" is stuck at GND
     Warning (13410): Pin "Sel_RA_ou_Wreg" is stuck at GND
     Warning (13410): Pin "Wreg_to_RA_sel" is stuck at GND
-Info: Implemented 29977 device resources after synthesis - the final resource count might be different
+Info: Implemented 29973 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 57 output pins
     Info: Implemented 16 bidirectional pins
-    Info: Implemented 29886 logic cells
+    Info: Implemented 29882 logic cells
     Info: Implemented 16 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 308 megabytes
-    Info: Processing ended: Sun Jun 22 23:48:28 2025
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Peak virtual memory: 309 megabytes
+    Info: Processing ended: Tue Jun 24 03:09:29 2025
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:45
 
 
