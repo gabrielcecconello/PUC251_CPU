@@ -20,26 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-puc251
-# storage
-db|puc251.(0).cnf
-db|puc251.(0).cnf
-# case_insensitive
-# source_file
-puc251.bdf
-953f565bbf4c88df5078554b4bf1e5e2
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 lpm_rom0
 # storage
 db|puc251.(2).cnf
@@ -1265,39 +1245,6 @@ add_sub
 
 # end
 # entity
-control
-# storage
-db|puc251.(1).cnf
-db|puc251.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-control.vhd
-c8befb4a2b32c04083e9b19d63abf9b9
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-control:inst14
-}
-# lmf
-|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 altsyncram_0371
 # storage
 db|puc251.(4).cnf
@@ -1395,11 +1342,64 @@ address_a0
 }
 # memory_file {
 puc251.mif
-fa4adc162b162eb03c7b9fc452b2997f
+55acc3db344b528635fea6d56dc585c
 }
 # hierarchies {
 lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated
 }
+# macro_sequence
+
+# end
+# entity
+puc251
+# storage
+db|puc251.(0).cnf
+db|puc251.(0).cnf
+# case_insensitive
+# source_file
+puc251.bdf
+4eccbdc211e4abaa1269787e6c49ddf5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|puc251.(1).cnf
+db|puc251.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+control.vhd
+aa359a384f2c1d11baf39019ff6960f9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+control:inst14
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end

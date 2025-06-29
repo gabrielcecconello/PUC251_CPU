@@ -65,6 +65,8 @@ BEGIN
 		alu_op <= "----";
 		pc_ctrl <= "00";
 		
+		next_state <= pres_state;
+		
 		CASE pres_state IS
 			WHEN rst =>
 				next_state <= fetch;
@@ -96,6 +98,7 @@ BEGIN
 						IF opcode(0) = '1' THEN
 							reg_wr_ena <= '1';
 							reg_di_sel <= '1';
+							Sel_RA_ou_Wreg <= '1';
 						ELSE
 							Wreg_wr_ena <= '1';
 						END IF;
@@ -156,12 +159,13 @@ BEGIN
 								outp <= '1';
 								IF opcode(0) = '1' THEN
 									alu_op <= "1111";
+									alu_to_gpio_sel <= '1';
 								ELSE
 									Wreg_on_dext <= '1';
 								END IF;
-							pc_ctrl <= "11";
-							next_state <= fet_dec_ex;
 						END CASE;
+						pc_ctrl <= "11";
+						next_state <= fet_dec_ex;
 					WHEN OTHERS => NULL;
 				END CASE;
 				
@@ -204,10 +208,12 @@ BEGIN
 							WHEN "11" =>
 								pc_ctrl <= "10";
 								stack_pop <= '1';
+								next_state <= fetch;
 							WHEN OTHERS => NULL;
 						END CASE;
 					WHEN "11111" =>
 						pc_ctrl <= "11";
+						next_state <= fet_dec_ex;
 					WHEN OTHERS => NULL;
 				END CASE;
 		END CASE;
