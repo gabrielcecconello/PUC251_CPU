@@ -1,5 +1,5 @@
 Analysis & Synthesis report for puc251
-Tue Jun 24 22:10:42 2025
+Mon Jun 30 00:08:25 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -15,20 +15,19 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |puc251|control:inst14|pres_state
- 10. User-Specified and Inferred Latches
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated
- 14. Parameter Settings for User Entity Instance: lpm_rom0:inst15|altsyncram:altsyncram_component
- 15. Parameter Settings for User Entity Instance: BUSMUX:inst7
- 16. Parameter Settings for User Entity Instance: port_io:inst6
- 17. Parameter Settings for User Entity Instance: port_io:inst8
- 18. Parameter Settings for User Entity Instance: BUSMUX:inst9
- 19. Parameter Settings for User Entity Instance: BUSMUX:inst13
- 20. Parameter Settings for User Entity Instance: BUSMUX:inst10
- 21. Parameter Settings for Inferred Entity Instance: ALU:inst|lpm_add_sub:Add0
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated
+ 13. Parameter Settings for User Entity Instance: lpm_rom0:inst15|altsyncram:altsyncram_component
+ 14. Parameter Settings for User Entity Instance: BUSMUX:inst7
+ 15. Parameter Settings for User Entity Instance: port_io:inst6
+ 16. Parameter Settings for User Entity Instance: port_io:inst8
+ 17. Parameter Settings for User Entity Instance: BUSMUX:inst9
+ 18. Parameter Settings for User Entity Instance: BUSMUX:inst13
+ 19. Parameter Settings for User Entity Instance: BUSMUX:inst10
+ 20. Parameter Settings for Inferred Entity Instance: ALU:inst|lpm_add_sub:Add0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -54,15 +53,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 24 22:10:41 2025        ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 30 00:08:24 2025        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; puc251                                       ;
 ; Top-level Entity Name              ; puc251                                       ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 29,845                                       ;
-;     Total combinational functions  ; 13,415                                       ;
-;     Dedicated logic registers      ; 16,558                                       ;
-; Total registers                    ; 16558                                        ;
+; Total logic elements               ; 29,832                                       ;
+;     Total combinational functions  ; 13,402                                       ;
+;     Dedicated logic registers      ; 16,574                                       ;
+; Total registers                    ; 16574                                        ;
 ; Total pins                         ; 74                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 32,768                                       ;
@@ -156,7 +155,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -166,24 +165,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+
-; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/lpm_rom0.vhd              ;
-; ../stack/stack.vhd               ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/stack/stack.vhd                  ;
-; ../prog_cnt/prog_cnt.vhd         ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/prog_cnt/prog_cnt.vhd            ;
-; ../Wreg/Wreg.vhd                 ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/Wreg/Wreg.vhd                    ;
-; ../reg_bank/reg_bank.vhd         ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/reg_bank/reg_bank.vhd            ;
-; ../ALU/ALU.vhd                   ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/ALU/ALU.vhd                      ;
-; ../port_io/port_io.vhd           ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/port_io/port_io.vhd              ;
-; ../ram_2048x8/ram_2048x8.vhd     ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/ram_2048x8/ram_2048x8.vhd        ;
-; control.vhd                      ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/control.vhd               ;
-; puc251.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/puc251.bdf                ;
-; puc251.mif                       ; yes             ; User Memory Initialization File    ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/puc251.mif                ;
+; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/lpm_rom0.vhd              ;
+; ../stack/stack.vhd               ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/stack/stack.vhd                  ;
+; ../prog_cnt/prog_cnt.vhd         ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/prog_cnt/prog_cnt.vhd            ;
+; ../Wreg/Wreg.vhd                 ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/Wreg/Wreg.vhd                    ;
+; ../reg_bank/reg_bank.vhd         ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/reg_bank/reg_bank.vhd            ;
+; ../ALU/ALU.vhd                   ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/ALU/ALU.vhd                      ;
+; ../port_io/port_io.vhd           ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/port_io/port_io.vhd              ;
+; ../ram_2048x8/ram_2048x8.vhd     ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/ram_2048x8/ram_2048x8.vhd        ;
+; control.vhd                      ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/control.vhd               ;
+; puc251.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc251.bdf                ;
+; puc251.mif                       ; yes             ; User Memory Initialization File    ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc251.mif                ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/users/gabri/downloads/altera/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf  ;
-; db/altsyncram_0371.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/db/altsyncram_0371.tdf    ;
+; db/altsyncram_0371.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/db/altsyncram_0371.tdf    ;
 ; busmux.tdf                       ; yes             ; Megafunction                       ; c:/users/gabri/downloads/altera/altera/91sp2/quartus/libraries/megafunctions/busmux.tdf      ;
 ; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/users/gabri/downloads/altera/altera/91sp2/quartus/libraries/megafunctions/lpm_mux.tdf     ;
-; db/mux_smc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/db/mux_smc.tdf            ;
+; db/mux_smc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/db/mux_smc.tdf            ;
 ; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; c:/users/gabri/downloads/altera/altera/91sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf ;
-; db/add_sub_rpi.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/db/add_sub_rpi.tdf        ;
+; db/add_sub_rpi.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/db/add_sub_rpi.tdf        ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+
 
 
@@ -192,27 +191,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 29,845 ;
+; Estimated Total logic elements              ; 29,832 ;
 ;                                             ;        ;
-; Total combinational functions               ; 13415  ;
+; Total combinational functions               ; 13402  ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 11154  ;
-;     -- 3 input functions                    ; 2225   ;
-;     -- <=2 input functions                  ; 36     ;
+;     -- 4 input functions                    ; 11156  ;
+;     -- 3 input functions                    ; 2208   ;
+;     -- <=2 input functions                  ; 38     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 13387  ;
+;     -- normal mode                          ; 13374  ;
 ;     -- arithmetic mode                      ; 28     ;
 ;                                             ;        ;
-; Total registers                             ; 16558  ;
-;     -- Dedicated logic registers            ; 16558  ;
+; Total registers                             ; 16574  ;
+;     -- Dedicated logic registers            ; 16574  ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 74     ;
 ; Total memory bits                           ; 32768  ;
 ; Maximum fan-out node                        ; clk    ;
-; Maximum fan-out                             ; 16574  ;
-; Total fan-out                               ; 117871 ;
+; Maximum fan-out                             ; 16590  ;
+; Total fan-out                               ; 117880 ;
 ; Average fan-out                             ; 3.92   ;
 +---------------------------------------------+--------+
 
@@ -222,30 +221,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers  ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
-; |puc251                                   ; 13415 (26)        ; 16558 (0)     ; 32768       ; 0            ; 0       ; 0         ; 74   ; 0            ; |puc251                                                                                ; work         ;
+; |puc251                                   ; 13402 (26)        ; 16574 (0)     ; 32768       ; 0            ; 0       ; 0         ; 74   ; 0            ; |puc251                                                                                ; work         ;
 ;    |ALU:inst|                             ; 98 (80)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst                                                                       ;              ;
 ;       |lpm_add_sub:Add0|                  ; 18 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst|lpm_add_sub:Add0                                                      ;              ;
 ;          |add_sub_rpi:auto_generated|     ; 18 (18)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst|lpm_add_sub:Add0|add_sub_rpi:auto_generated                           ;              ;
-;    |Wreg:inst2|                           ; 8 (8)             ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|Wreg:inst2                                                                     ;              ;
-;    |busmux:inst10|                        ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10                                                                  ;              ;
-;       |lpm_mux:$00000|                    ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000                                                   ;              ;
-;          |mux_smc:auto_generated|         ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000|mux_smc:auto_generated                            ;              ;
-;    |busmux:inst13|                        ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13                                                                  ;              ;
-;       |lpm_mux:$00000|                    ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000                                                   ;              ;
-;          |mux_smc:auto_generated|         ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000|mux_smc:auto_generated                            ;              ;
+;    |Wreg:inst2|                           ; 8 (8)             ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|Wreg:inst2                                                                     ; work         ;
+;    |busmux:inst10|                        ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10                                                                  ; work         ;
+;       |lpm_mux:$00000|                    ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000                                                   ; work         ;
+;          |mux_smc:auto_generated|         ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000|mux_smc:auto_generated                            ; work         ;
+;    |busmux:inst13|                        ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13                                                                  ; work         ;
+;       |lpm_mux:$00000|                    ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000                                                   ; work         ;
+;          |mux_smc:auto_generated|         ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000|mux_smc:auto_generated                            ; work         ;
 ;    |busmux:inst7|                         ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7                                                                   ;              ;
-;       |lpm_mux:$00000|                    ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000                                                    ;              ;
-;          |mux_smc:auto_generated|         ; 11 (11)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated                             ;              ;
+;       |lpm_mux:$00000|                    ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000                                                    ; work         ;
+;          |mux_smc:auto_generated|         ; 11 (11)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated                             ; work         ;
 ;    |control:inst14|                       ; 37 (37)           ; 3 (3)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|control:inst14                                                                 ; work         ;
 ;    |lpm_rom0:inst15|                      ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|lpm_rom0:inst15                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|lpm_rom0:inst15|altsyncram:altsyncram_component                                ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|lpm_rom0:inst15|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_0371:auto_generated| ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated ; work         ;
-;    |port_io:inst6|                        ; 28 (28)           ; 16 (16)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst6                                                                  ;              ;
-;    |port_io:inst8|                        ; 31 (31)           ; 16 (16)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst8                                                                  ;              ;
+;    |port_io:inst6|                        ; 21 (21)           ; 24 (24)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst6                                                                  ; work         ;
+;    |port_io:inst8|                        ; 25 (25)           ; 24 (24)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst8                                                                  ; work         ;
 ;    |prog_cnt:inst4|                       ; 33 (33)           ; 11 (11)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|prog_cnt:inst4                                                                 ; work         ;
-;    |ram_2048x8:inst5|                     ; 13008 (13008)     ; 16384 (16384) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ram_2048x8:inst5                                                               ;              ;
+;    |ram_2048x8:inst5|                     ; 13008 (13008)     ; 16384 (16384) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ram_2048x8:inst5                                                               ; work         ;
 ;    |reg_bank:inst1|                       ; 30 (30)           ; 32 (32)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|reg_bank:inst1                                                                 ; work         ;
-;    |stack:inst3|                          ; 89 (89)           ; 88 (88)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|stack:inst3                                                                    ; work         ;
+;    |stack:inst3|                          ; 89 (89)           ; 88 (88)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|stack:inst3                                                                    ;              ;
 +-------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -271,41 +270,15 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------+------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                   ;
-+-----------------------------------------------------+------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal    ; Free of Timing Hazards ;
-+-----------------------------------------------------+------------------------+------------------------+
-; port_io:inst6|latch[0]                              ; port_io:inst6|latch[0] ; yes                    ;
-; port_io:inst8|latch[0]                              ; port_io:inst8|latch[0] ; yes                    ;
-; port_io:inst6|latch[7]                              ; port_io:inst6|latch[7] ; yes                    ;
-; port_io:inst8|latch[7]                              ; port_io:inst8|latch[7] ; yes                    ;
-; port_io:inst6|latch[1]                              ; port_io:inst6|latch[1] ; yes                    ;
-; port_io:inst8|latch[1]                              ; port_io:inst8|latch[1] ; yes                    ;
-; port_io:inst6|latch[2]                              ; port_io:inst6|latch[2] ; yes                    ;
-; port_io:inst8|latch[2]                              ; port_io:inst8|latch[2] ; yes                    ;
-; port_io:inst6|latch[3]                              ; port_io:inst6|latch[3] ; yes                    ;
-; port_io:inst8|latch[3]                              ; port_io:inst8|latch[3] ; yes                    ;
-; port_io:inst6|latch[4]                              ; port_io:inst6|latch[4] ; yes                    ;
-; port_io:inst8|latch[4]                              ; port_io:inst8|latch[4] ; yes                    ;
-; port_io:inst6|latch[5]                              ; port_io:inst6|latch[5] ; yes                    ;
-; port_io:inst8|latch[5]                              ; port_io:inst8|latch[5] ; yes                    ;
-; port_io:inst6|latch[6]                              ; port_io:inst6|latch[6] ; yes                    ;
-; port_io:inst8|latch[6]                              ; port_io:inst8|latch[6] ; yes                    ;
-; Number of user-specified and inferred latches = 16  ;                        ;                        ;
-+-----------------------------------------------------+------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16558 ;
+; Total registers                              ; 16574 ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 16558 ;
+; Number of registers using Asynchronous Clear ; 16574 ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16541 ;
 ; Number of registers using Preset             ; 0     ;
@@ -513,7 +486,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Jun 24 22:09:27 2025
+    Info: Processing started: Mon Jun 30 00:07:44 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off puc251 -c puc251
 Info: Found 2 design units, including 1 entities, in source file lpm_rom0.vhd
     Info: Found design unit 1: lpm_rom0-SYN
@@ -584,25 +557,7 @@ Info: Found 1 design units, including 1 entities, in source file db/mux_smc.tdf
 Info: Elaborating entity "mux_smc" for hierarchy "BUSMUX:inst7|lpm_mux:$00000|mux_smc:auto_generated"
 Info: Elaborating entity "ram_2048x8" for hierarchy "ram_2048x8:inst5"
 Info: Elaborating entity "port_io" for hierarchy "port_io:inst6"
-Warning (10631): VHDL Process Statement warning at port_io.vhd(65): inferring latch(es) for signal or variable "latch", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "latch[0]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[1]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[2]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[3]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[4]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[5]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[6]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[7]" at port_io.vhd(65)
 Info: Elaborating entity "port_io" for hierarchy "port_io:inst8"
-Warning (10631): VHDL Process Statement warning at port_io.vhd(65): inferring latch(es) for signal or variable "latch", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "latch[0]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[1]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[2]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[3]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[4]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[5]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[6]" at port_io.vhd(65)
-Info (10041): Inferred latch for "latch[7]" at port_io.vhd(65)
 Info: Elaborating entity "Wreg" for hierarchy "Wreg:inst2"
 Info: Inferred 1 megafunctions from design logic
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "ALU:inst|Add0"
@@ -623,16 +578,16 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "inst11[4]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "inst11[5]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "inst11[6]" to the node "busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]" into an OR gate
-Info: Implemented 29970 device resources after synthesis - the final resource count might be different
+Info: Implemented 29957 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 56 output pins
     Info: Implemented 16 bidirectional pins
-    Info: Implemented 29880 logic cells
+    Info: Implemented 29867 logic cells
     Info: Implemented 16 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 307 megabytes
-    Info: Processing ended: Tue Jun 24 22:10:42 2025
-    Info: Elapsed time: 00:01:15
-    Info: Total CPU time (on all processors): 00:00:51
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 313 megabytes
+    Info: Processing ended: Mon Jun 30 00:08:25 2025
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:44
 
 

@@ -20,13 +20,13 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/puc251.vwf")
+VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc251.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 242788;
-		NUMERATOR = 1114;
-		DENOMINATOR = 242788;
+		ZBEGIN = 616860;
+		ZEND = 1000000;
+		NUMERATOR = 1758;
+		DENOMINATOR = 383140;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

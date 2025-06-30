@@ -55,12 +55,16 @@ BEGIN
 	-- Latch captura valores da porta durante leitura da porta (abus = base_addr)
 	PROCESS(all)
 	BEGIN
-		IF rd_en = '1' AND abus = base_addr THEN
-			FOR i IN 0 TO 7 LOOP
-				IF dir_reg(i) = '0' THEN
-					latch(i) <= port_io(i);
-				END IF;
-			END LOOP;
+		IF nrst = '0' THEN
+			latch <= (others => '0');
+		ELSIF rising_edge(clk_in) THEN
+			IF rd_en = '1' AND abus = base_addr THEN
+				FOR i IN 0 TO 7 LOOP
+					IF dir_reg(i) = '0' THEN
+						latch(i) <= port_io(i);
+					END IF;
+				END LOOP;
+			END IF;
 		END IF;
 	END PROCESS;
 	

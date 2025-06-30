@@ -858,45 +858,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-port_io
-# storage
-db|puc251.(13).cnf
-db|puc251.(13).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|port_io|port_io.vhd
-7e6b7acd923f3817394ca364e29eaedf
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
-base_addr
-00
-PARAMETER_UNSIGNED_HEX
-USR
-}
-# hierarchies {
-port_io:inst8
-}
-# lmf
-|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 Wreg
 # storage
 db|puc251.(14).cnf
@@ -922,45 +883,6 @@ ON
 }
 # hierarchies {
 Wreg:inst2
-}
-# lmf
-|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-port_io
-# storage
-db|puc251.(15).cnf
-db|puc251.(15).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|port_io|port_io.vhd
-7e6b7acd923f3817394ca364e29eaedf
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
-base_addr
-02
-PARAMETER_UNSIGNED_HEX
-USR
-}
-# hierarchies {
-port_io:inst6
 }
 # lmf
 |users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1245,6 +1167,137 @@ add_sub
 
 # end
 # entity
+puc251
+# storage
+db|puc251.(0).cnf
+db|puc251.(0).cnf
+# case_insensitive
+# source_file
+puc251.bdf
+4eccbdc211e4abaa1269787e6c49ddf5
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|puc251.(1).cnf
+db|puc251.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+control.vhd
+aa359a384f2c1d11baf39019ff6960f9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+control:inst14
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+port_io
+# storage
+db|puc251.(13).cnf
+db|puc251.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|port_io|port_io.vhd
+1469c9464ea4e654ad7e36f1b8d02a94
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+base_addr
+02
+PARAMETER_UNSIGNED_HEX
+USR
+}
+# hierarchies {
+port_io:inst6
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+port_io
+# storage
+db|puc251.(15).cnf
+db|puc251.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|port_io|port_io.vhd
+1469c9464ea4e654ad7e36f1b8d02a94
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+base_addr
+00
+PARAMETER_UNSIGNED_HEX
+USR
+}
+# hierarchies {
+port_io:inst8
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 altsyncram_0371
 # storage
 db|puc251.(4).cnf
@@ -1342,64 +1395,11 @@ address_a0
 }
 # memory_file {
 puc251.mif
-55acc3db344b528635fea6d56dc585c
+3c682ed8a0cd8802f2c7e1a408f39f7
 }
 # hierarchies {
 lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated
 }
-# macro_sequence
-
-# end
-# entity
-puc251
-# storage
-db|puc251.(0).cnf
-db|puc251.(0).cnf
-# case_insensitive
-# source_file
-puc251.bdf
-4eccbdc211e4abaa1269787e6c49ddf5
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-control
-# storage
-db|puc251.(1).cnf
-db|puc251.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-control.vhd
-aa359a384f2c1d11baf39019ff6960f9
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-control:inst14
-}
-# lmf
-|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
