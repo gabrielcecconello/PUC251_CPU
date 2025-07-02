@@ -25,7 +25,17 @@ BEGIN
 			R1 <= (others => '0');
 			R2 <= (others => '0');
 			R3 <= (others => '0');
-		ELSIF RISING_EDGE(clk_in) THEN
+		ELSIF RISING_EDGE(clk_in) THEN	
+			IF regn_wr_ena = '1' THEN
+				CASE regn_wr_sel IS
+					WHEN "00" => R0 <= regn_di;
+					WHEN "01" => R1 <= regn_di;
+					WHEN "10" => R2 <= regn_di;
+					WHEN "11" => R3 <= regn_di;
+					WHEN OTHERS => NULL;
+				END CASE;
+			END IF;
+			
 			-- Flags c, z e v possuem prioridade.
 			IF c_flag_wr_ena = '1' THEN
 				R3(0) <= c_flag_in;
@@ -35,17 +45,6 @@ BEGIN
 			END IF;
 			IF v_flag_wr_ena = '1' THEN
 				R3(2) <= v_flag_in;
-			END IF;
-				
-			IF regn_wr_ena = '1' AND
-			 NOT (c_flag_wr_ena = '1' OR z_flag_wr_ena = '1' OR v_flag_wr_ena = '1') THEN
-				CASE regn_wr_sel IS
-					WHEN "00" => R0 <= regn_di;
-					WHEN "01" => R1 <= regn_di;
-					WHEN "10" => R2 <= regn_di;
-					WHEN "11" => R3 <= regn_di;
-					WHEN OTHERS => NULL;
-				END CASE;
 			END IF;
 		END IF;
 	END PROCESS;

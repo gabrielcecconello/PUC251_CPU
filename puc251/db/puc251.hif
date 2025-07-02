@@ -43,9 +43,6 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
-# hierarchies {
-lpm_rom0:inst15
-}
 # lmf
 |users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -351,7 +348,7 @@ address_a0
 3
 }
 # hierarchies {
-lpm_rom0:inst15|altsyncram:altsyncram_component
+rom:inst15|altsyncram:altsyncram_component
 }
 # macro_sequence
 
@@ -718,39 +715,6 @@ ON
 }
 # hierarchies {
 ALU:inst
-}
-# lmf
-|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-reg_bank
-# storage
-db|puc251.(9).cnf
-db|puc251.(9).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|reg_bank|reg_bank.vhd
-df809b7b3988c2b7fe3a928b64d74256
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-reg_bank:inst1
 }
 # lmf
 |users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1167,59 +1131,6 @@ add_sub
 
 # end
 # entity
-puc251
-# storage
-db|puc251.(0).cnf
-db|puc251.(0).cnf
-# case_insensitive
-# source_file
-puc251.bdf
-4eccbdc211e4abaa1269787e6c49ddf5
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-control
-# storage
-db|puc251.(1).cnf
-db|puc251.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-control.vhd
-aa359a384f2c1d11baf39019ff6960f9
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-control:inst14
-}
-# lmf
-|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 port_io
 # storage
 db|puc251.(13).cnf
@@ -1290,6 +1201,125 @@ USR
 }
 # hierarchies {
 port_io:inst8
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+rom
+# storage
+db|puc251.(18).cnf
+db|puc251.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+rom.vhd
+433ef3af7281755ac1cb5a16a93f7879
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+rom:inst15
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|puc251.(1).cnf
+db|puc251.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+control.vhd
+aa359a384f2c1d11baf39019ff6960f9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+control:inst14
+}
+# lmf
+|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+puc251
+# storage
+db|puc251.(0).cnf
+db|puc251.(0).cnf
+# case_insensitive
+# source_file
+puc251.bdf
+3229abb515a484b71d3acd8e55ef6e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+reg_bank
+# storage
+db|puc251.(9).cnf
+db|puc251.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|gabri|downloads|tp1reconfiguraveis|reconfiguraveis|reg_bank|reg_bank.vhd
+2b1e86d79c54bca073b2b8d741c229
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+reg_bank:inst1
 }
 # lmf
 |users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1395,10 +1425,10 @@ address_a0
 }
 # memory_file {
 puc251.mif
-3c682ed8a0cd8802f2c7e1a408f39f7
+e771fcd6dc649d8bfd962fdf95b17e2
 }
 # hierarchies {
-lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated
+rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated
 }
 # macro_sequence
 

@@ -38,6 +38,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|ALU:inst|lpm_mux:Mux4" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|control:inst14|lpm_mux:Mux0" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|ram_2048x8:inst5|lpm_mux:Mux4" CBX_FILE_NAME="mux_8tc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|rom:inst15|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_0371.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|ALU:inst|lpm_mux:Mux5" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|BUSMUX:inst9|lpm_mux:$00000" CBX_FILE_NAME="mux_smc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|control:inst14|lpm_mux:Mux1" CBX_FILE_NAME="mux_3nc.tdf"/>
@@ -84,7 +85,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|control:inst14|lpm_mux:Mux35" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|control:inst14|lpm_mux:Mux53" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|control:inst14|lpm_mux:Mux8" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|lpm_rom0:inst15|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_0371.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|reg_bank:inst1|lpm_mux:Mux22" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|control:inst14|lpm_mux:Mux18" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|puc251|control:inst14|lpm_mux:Mux36" CBX_FILE_NAME="mux_3nc.tdf"/>

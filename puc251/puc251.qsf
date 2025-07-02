@@ -48,7 +48,6 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name VHDL_FILE lpm_rom0.vhd
 set_global_assignment -name VHDL_FILE ../stack/stack.vhd
 set_global_assignment -name VHDL_FILE ../prog_cnt/prog_cnt.vhd
 set_global_assignment -name VHDL_FILE ../Wreg/Wreg.vhd

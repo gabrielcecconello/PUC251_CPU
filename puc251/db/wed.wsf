@@ -20,13 +20,13 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc251.vwf")
+VECTOR("C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/puc251.vwf")
 {
 	ZOOM{
-		ZBEGIN = 616860;
-		ZEND = 1000000;
-		NUMERATOR = 1758;
-		DENOMINATOR = 383140;
+		ZBEGIN = 0;
+		ZEND = 156250;
+		NUMERATOR = 1147;
+		DENOMINATOR = 156250;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -646,7 +646,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw";
+		SIGNAL = "port_io:inst8|port_reg";
 		INDEX = 76;
 		FORMAT = T;
 		SCALE = 1;
@@ -654,7 +654,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[7]";
+		SIGNAL = "port_io:inst8|port_reg[7]";
 		INDEX = 77;
 		FORMAT = E;
 		SCALE = 1;
@@ -662,7 +662,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[6]";
+		SIGNAL = "port_io:inst8|port_reg[6]";
 		INDEX = 78;
 		FORMAT = E;
 		SCALE = 1;
@@ -670,7 +670,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[5]";
+		SIGNAL = "port_io:inst8|port_reg[5]";
 		INDEX = 79;
 		FORMAT = E;
 		SCALE = 1;
@@ -678,7 +678,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[4]";
+		SIGNAL = "port_io:inst8|port_reg[4]";
 		INDEX = 80;
 		FORMAT = E;
 		SCALE = 1;
@@ -686,7 +686,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[3]";
+		SIGNAL = "port_io:inst8|port_reg[3]";
 		INDEX = 81;
 		FORMAT = E;
 		SCALE = 1;
@@ -694,7 +694,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[2]";
+		SIGNAL = "port_io:inst8|port_reg[2]";
 		INDEX = 82;
 		FORMAT = E;
 		SCALE = 1;
@@ -702,7 +702,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[1]";
+		SIGNAL = "port_io:inst8|port_reg[1]";
 		INDEX = 83;
 		FORMAT = E;
 		SCALE = 1;
@@ -710,7 +710,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[0]";
+		SIGNAL = "port_io:inst8|port_reg[0]";
 		INDEX = 84;
 		FORMAT = E;
 		SCALE = 1;
@@ -718,7 +718,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led";
+		SIGNAL = "Wreg:inst2|r";
 		INDEX = 85;
 		FORMAT = T;
 		SCALE = 1;
@@ -726,7 +726,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[7]";
+		SIGNAL = "Wreg:inst2|r[7]";
 		INDEX = 86;
 		FORMAT = E;
 		SCALE = 1;
@@ -734,7 +734,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[6]";
+		SIGNAL = "Wreg:inst2|r[6]";
 		INDEX = 87;
 		FORMAT = E;
 		SCALE = 1;
@@ -742,7 +742,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[5]";
+		SIGNAL = "Wreg:inst2|r[5]";
 		INDEX = 88;
 		FORMAT = E;
 		SCALE = 1;
@@ -750,7 +750,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[4]";
+		SIGNAL = "Wreg:inst2|r[4]";
 		INDEX = 89;
 		FORMAT = E;
 		SCALE = 1;
@@ -758,7 +758,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[3]";
+		SIGNAL = "Wreg:inst2|r[3]";
 		INDEX = 90;
 		FORMAT = E;
 		SCALE = 1;
@@ -766,7 +766,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[2]";
+		SIGNAL = "Wreg:inst2|r[2]";
 		INDEX = 91;
 		FORMAT = E;
 		SCALE = 1;
@@ -774,7 +774,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[1]";
+		SIGNAL = "Wreg:inst2|r[1]";
 		INDEX = 92;
 		FORMAT = E;
 		SCALE = 1;
@@ -782,7 +782,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[0]";
+		SIGNAL = "Wreg:inst2|r[0]";
 		INDEX = 93;
 		FORMAT = E;
 		SCALE = 1;
@@ -790,7 +790,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw~result";
+		SIGNAL = "sw";
 		INDEX = 94;
 		FORMAT = T;
 		SCALE = 1;
@@ -798,7 +798,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[7]~result";
+		SIGNAL = "sw[7]";
 		INDEX = 95;
 		FORMAT = E;
 		SCALE = 1;
@@ -806,7 +806,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[6]~result";
+		SIGNAL = "sw[6]";
 		INDEX = 96;
 		FORMAT = E;
 		SCALE = 1;
@@ -814,7 +814,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[5]~result";
+		SIGNAL = "sw[5]";
 		INDEX = 97;
 		FORMAT = E;
 		SCALE = 1;
@@ -822,7 +822,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[4]~result";
+		SIGNAL = "sw[4]";
 		INDEX = 98;
 		FORMAT = E;
 		SCALE = 1;
@@ -830,7 +830,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[3]~result";
+		SIGNAL = "sw[3]";
 		INDEX = 99;
 		FORMAT = E;
 		SCALE = 1;
@@ -838,7 +838,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[2]~result";
+		SIGNAL = "sw[2]";
 		INDEX = 100;
 		FORMAT = E;
 		SCALE = 1;
@@ -846,7 +846,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[1]~result";
+		SIGNAL = "sw[1]";
 		INDEX = 101;
 		FORMAT = E;
 		SCALE = 1;
@@ -854,7 +854,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sw[0]~result";
+		SIGNAL = "sw[0]";
 		INDEX = 102;
 		FORMAT = E;
 		SCALE = 1;
@@ -862,7 +862,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led~result";
+		SIGNAL = "led";
 		INDEX = 103;
 		FORMAT = T;
 		SCALE = 1;
@@ -870,7 +870,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[7]~result";
+		SIGNAL = "led[7]";
 		INDEX = 104;
 		FORMAT = E;
 		SCALE = 1;
@@ -878,7 +878,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[6]~result";
+		SIGNAL = "led[6]";
 		INDEX = 105;
 		FORMAT = E;
 		SCALE = 1;
@@ -886,7 +886,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[5]~result";
+		SIGNAL = "led[5]";
 		INDEX = 106;
 		FORMAT = E;
 		SCALE = 1;
@@ -894,7 +894,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[4]~result";
+		SIGNAL = "led[4]";
 		INDEX = 107;
 		FORMAT = E;
 		SCALE = 1;
@@ -902,7 +902,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[3]~result";
+		SIGNAL = "led[3]";
 		INDEX = 108;
 		FORMAT = E;
 		SCALE = 1;
@@ -910,7 +910,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[2]~result";
+		SIGNAL = "led[2]";
 		INDEX = 109;
 		FORMAT = E;
 		SCALE = 1;
@@ -918,7 +918,7 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[1]~result";
+		SIGNAL = "led[1]";
 		INDEX = 110;
 		FORMAT = E;
 		SCALE = 1;
@@ -926,8 +926,368 @@ VECTOR("C:/Users/gabri/Downloads/tp1Reconfiguraveis/reconfiguraveis/puc251/puc25
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "led[0]~result";
+		SIGNAL = "led[0]";
 		INDEX = 111;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw~result";
+		INDEX = 112;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[7]~result";
+		INDEX = 113;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[6]~result";
+		INDEX = 114;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[5]~result";
+		INDEX = 115;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[4]~result";
+		INDEX = 116;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[3]~result";
+		INDEX = 117;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[2]~result";
+		INDEX = 118;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[1]~result";
+		INDEX = 119;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sw[0]~result";
+		INDEX = 120;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led~result";
+		INDEX = 121;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[7]~result";
+		INDEX = 122;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[6]~result";
+		INDEX = 123;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[5]~result";
+		INDEX = 124;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[4]~result";
+		INDEX = 125;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[3]~result";
+		INDEX = 126;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[2]~result";
+		INDEX = 127;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[1]~result";
+		INDEX = 128;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "led[0]~result";
+		INDEX = 129;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0";
+		INDEX = 130;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[7]";
+		INDEX = 131;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[6]";
+		INDEX = 132;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[5]";
+		INDEX = 133;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[4]";
+		INDEX = 134;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[3]";
+		INDEX = 135;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[2]";
+		INDEX = 136;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[1]";
+		INDEX = 137;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R0[0]";
+		INDEX = 138;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1";
+		INDEX = 139;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[7]";
+		INDEX = 140;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[6]";
+		INDEX = 141;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[5]";
+		INDEX = 142;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[4]";
+		INDEX = 143;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[3]";
+		INDEX = 144;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[2]";
+		INDEX = 145;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[1]";
+		INDEX = 146;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R1[0]";
+		INDEX = 147;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2";
+		INDEX = 148;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[7]";
+		INDEX = 149;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[6]";
+		INDEX = 150;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[5]";
+		INDEX = 151;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[4]";
+		INDEX = 152;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[3]";
+		INDEX = 153;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[2]";
+		INDEX = 154;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[1]";
+		INDEX = 155;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "reg_bank:inst1|R2[0]";
+		INDEX = 156;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
