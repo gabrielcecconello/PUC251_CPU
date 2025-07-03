@@ -1,5 +1,5 @@
 Analysis & Synthesis report for puc251
-Wed Jul 02 02:48:05 2025
+Thu Jul 03 01:28:17 2025
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -53,7 +53,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 02 02:48:05 2025        ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 03 01:28:17 2025        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; puc251                                       ;
 ; Top-level Entity Name              ; puc251                                       ;
@@ -165,6 +165,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+
+; rom.vhd                          ; yes             ; User Wizard-Generated File         ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/rom.vhd                   ;
 ; ../stack/stack.vhd               ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/stack/stack.vhd                  ;
 ; ../prog_cnt/prog_cnt.vhd         ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/prog_cnt/prog_cnt.vhd            ;
 ; ../Wreg/Wreg.vhd                 ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/Wreg/Wreg.vhd                    ;
@@ -175,7 +176,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; control.vhd                      ; yes             ; User VHDL File                     ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/control.vhd               ;
 ; puc251.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/puc251.bdf                ;
 ; puc251.mif                       ; yes             ; User Memory Initialization File    ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/puc251.mif                ;
-; rom.vhd                          ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/rom.vhd                   ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/users/gabri/downloads/altera/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf  ;
 ; db/altsyncram_0371.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/db/altsyncram_0371.tdf    ;
 ; busmux.tdf                       ; yes             ; Megafunction                       ; c:/users/gabri/downloads/altera/altera/91sp2/quartus/libraries/megafunctions/busmux.tdf      ;
@@ -225,25 +225,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |ALU:inst|                             ; 97 (79)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst                                                                  ;              ;
 ;       |lpm_add_sub:Add0|                  ; 18 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst|lpm_add_sub:Add0                                                 ;              ;
 ;          |add_sub_rpi:auto_generated|     ; 18 (18)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ALU:inst|lpm_add_sub:Add0|add_sub_rpi:auto_generated                      ;              ;
-;    |Wreg:inst2|                           ; 8 (8)             ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|Wreg:inst2                                                                ; work         ;
+;    |Wreg:inst2|                           ; 8 (8)             ; 8 (8)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|Wreg:inst2                                                                ;              ;
 ;    |busmux:inst10|                        ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10                                                             ; work         ;
 ;       |lpm_mux:$00000|                    ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000                                              ; work         ;
 ;          |mux_smc:auto_generated|         ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst10|lpm_mux:$00000|mux_smc:auto_generated                       ; work         ;
-;    |busmux:inst13|                        ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13                                                             ; work         ;
-;       |lpm_mux:$00000|                    ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000                                              ; work         ;
-;          |mux_smc:auto_generated|         ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000|mux_smc:auto_generated                       ; work         ;
+;    |busmux:inst13|                        ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13                                                             ;              ;
+;       |lpm_mux:$00000|                    ; 8 (0)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000                                              ;              ;
+;          |mux_smc:auto_generated|         ; 8 (8)             ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst13|lpm_mux:$00000|mux_smc:auto_generated                       ;              ;
 ;    |busmux:inst7|                         ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7                                                              ;              ;
-;       |lpm_mux:$00000|                    ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000                                               ; work         ;
-;          |mux_smc:auto_generated|         ; 11 (11)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated                        ; work         ;
-;    |control:inst14|                       ; 35 (35)           ; 3 (3)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|control:inst14                                                            ; work         ;
-;    |port_io:inst6|                        ; 21 (21)           ; 24 (24)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst6                                                             ; work         ;
-;    |port_io:inst8|                        ; 25 (25)           ; 24 (24)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst8                                                             ; work         ;
-;    |prog_cnt:inst4|                       ; 33 (33)           ; 11 (11)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|prog_cnt:inst4                                                            ; work         ;
-;    |ram_2048x8:inst5|                     ; 13008 (13008)     ; 16384 (16384) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ram_2048x8:inst5                                                          ; work         ;
-;    |reg_bank:inst1|                       ; 28 (28)           ; 32 (32)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|reg_bank:inst1                                                            ; work         ;
-;    |rom:inst15|                           ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|rom:inst15                                                                ; work         ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|rom:inst15|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_0371:auto_generated| ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated ; work         ;
+;       |lpm_mux:$00000|                    ; 11 (0)            ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000                                               ;              ;
+;          |mux_smc:auto_generated|         ; 11 (11)           ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|busmux:inst7|lpm_mux:$00000|mux_smc:auto_generated                        ;              ;
+;    |control:inst14|                       ; 35 (35)           ; 3 (3)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|control:inst14                                                            ;              ;
+;    |port_io:inst6|                        ; 21 (21)           ; 24 (24)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst6                                                             ;              ;
+;    |port_io:inst8|                        ; 25 (25)           ; 24 (24)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|port_io:inst8                                                             ;              ;
+;    |prog_cnt:inst4|                       ; 33 (33)           ; 11 (11)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|prog_cnt:inst4                                                            ;              ;
+;    |ram_2048x8:inst5|                     ; 13008 (13008)     ; 16384 (16384) ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|ram_2048x8:inst5                                                          ;              ;
+;    |reg_bank:inst1|                       ; 28 (28)           ; 32 (32)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|reg_bank:inst1                                                            ;              ;
+;    |rom:inst15|                           ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|rom:inst15                                                                ;              ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|rom:inst15|altsyncram:altsyncram_component                                ;              ;
+;          |altsyncram_0371:auto_generated| ; 0 (0)             ; 0 (0)         ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated ;              ;
 ;    |stack:inst3|                          ; 89 (89)           ; 88 (88)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |puc251|stack:inst3                                                               ;              ;
 +-------------------------------------------+-------------------+---------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -486,8 +486,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jul 02 02:47:27 2025
+    Info: Processing started: Thu Jul 03 01:27:36 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off puc251 -c puc251
+Info: Found 2 design units, including 1 entities, in source file rom.vhd
+    Info: Found design unit 1: rom-SYN
+    Info: Found entity 1: rom
+Info: Found 1 design units, including 1 entities, in source file puc251_board.bdf
+    Info: Found entity 1: puc251_board
 Info: Found 2 design units, including 1 entities, in source file /users/gabri/downloads/tp1reconfiguraveis/reconfiguraveis/stack/stack.vhd
     Info: Found design unit 1: stack-arch
     Info: Found entity 1: stack
@@ -514,16 +519,10 @@ Info: Found 2 design units, including 1 entities, in source file control.vhd
     Info: Found entity 1: control
 Info: Found 1 design units, including 1 entities, in source file puc251.bdf
     Info: Found entity 1: puc251
-Info: Found 2 design units, including 1 entities, in source file display.vhd
-    Info: Found design unit 1: display-arch
-    Info: Found entity 1: display
 Info: Elaborating entity "puc251" for the top level hierarchy
 Info: Elaborating entity "ALU" for hierarchy "ALU:inst"
 Info: Elaborating entity "reg_bank" for hierarchy "reg_bank:inst1"
 Info: Elaborating entity "control" for hierarchy "control:inst14"
-Warning: Using design file rom.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info: Found design unit 1: rom-SYN
-    Info: Found entity 1: rom
 Info: Elaborating entity "rom" for hierarchy "rom:inst15"
 Info: Elaborating entity "altsyncram" for hierarchy "rom:inst15|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "rom:inst15|altsyncram:altsyncram_component"
@@ -584,10 +583,10 @@ Info: Implemented 29952 device resources after synthesis - the final resource co
     Info: Implemented 16 bidirectional pins
     Info: Implemented 29862 logic cells
     Info: Implemented 16 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 313 megabytes
-    Info: Processing ended: Wed Jul 02 02:48:05 2025
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 322 megabytes
+    Info: Processing ended: Thu Jul 03 01:28:17 2025
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:00:24
 
 

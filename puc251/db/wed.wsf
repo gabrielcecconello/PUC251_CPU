@@ -23,11 +23,11 @@ applicable agreement for further details.
 VECTOR("C:/Users/gabri/Downloads/tp1reconfiguraveis/reconfiguraveis/puc251/puc251.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 156250;
+		ZBEGIN = 3446760;
+		ZEND = 3581077;
 		NUMERATOR = 1147;
 		DENOMINATOR = 156250;
-		TOP_INDEX = 0;
+		TOP_INDEX = 76;
 	}
 	CLOCK{
 		PERIOD = 10000;

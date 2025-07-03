@@ -1,0 +1,496 @@
+Classic Timing Analyzer report for puc251
+Wed Jul 02 18:23:34 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                             ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------------------------------------+---------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                                             ; To                              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------------------------------------+---------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.144 ns                         ; sw[3]                                                                            ; port_io:inst6|latch[3]          ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 10.160 ns                        ; port_io:inst8|port_reg[7]                                                        ; led[7]                          ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.945 ns                        ; led[6]                                                                           ; port_io:inst8|latch[6]          ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 53.40 MHz ( period = 18.727 ns ) ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7] ; ram_2048x8:inst5|memory[733][3] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                                                  ;                                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------------------------------------+---------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------------------------------------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                                              ; To                               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------------------------------------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 53.40 MHz ( period = 18.727 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[733][3]  ; clk        ; clk      ; None                        ; None                      ; 18.499 ns               ;
+; N/A                                     ; 53.46 MHz ( period = 18.706 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[953][3]  ; clk        ; clk      ; None                        ; None                      ; 18.477 ns               ;
+; N/A                                     ; 53.48 MHz ( period = 18.697 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1598][3] ; clk        ; clk      ; None                        ; None                      ; 18.447 ns               ;
+; N/A                                     ; 53.62 MHz ( period = 18.650 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[815][3]  ; clk        ; clk      ; None                        ; None                      ; 18.423 ns               ;
+; N/A                                     ; 53.66 MHz ( period = 18.637 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1915][3] ; clk        ; clk      ; None                        ; None                      ; 18.395 ns               ;
+; N/A                                     ; 53.66 MHz ( period = 18.637 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[674][3]  ; clk        ; clk      ; None                        ; None                      ; 18.428 ns               ;
+; N/A                                     ; 53.66 MHz ( period = 18.635 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[2047][3] ; clk        ; clk      ; None                        ; None                      ; 18.393 ns               ;
+; N/A                                     ; 53.68 MHz ( period = 18.630 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1519][3] ; clk        ; clk      ; None                        ; None                      ; 18.403 ns               ;
+; N/A                                     ; 53.69 MHz ( period = 18.626 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1595][3] ; clk        ; clk      ; None                        ; None                      ; 18.402 ns               ;
+; N/A                                     ; 53.70 MHz ( period = 18.622 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1723][3] ; clk        ; clk      ; None                        ; None                      ; 18.398 ns               ;
+; N/A                                     ; 53.71 MHz ( period = 18.617 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1501][3] ; clk        ; clk      ; None                        ; None                      ; 18.383 ns               ;
+; N/A                                     ; 53.72 MHz ( period = 18.615 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1423][3] ; clk        ; clk      ; None                        ; None                      ; 18.402 ns               ;
+; N/A                                     ; 53.73 MHz ( period = 18.610 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1958][3] ; clk        ; clk      ; None                        ; None                      ; 18.384 ns               ;
+; N/A                                     ; 53.74 MHz ( period = 18.609 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[185][3]  ; clk        ; clk      ; None                        ; None                      ; 18.357 ns               ;
+; N/A                                     ; 53.74 MHz ( period = 18.608 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[447][3]  ; clk        ; clk      ; None                        ; None                      ; 18.377 ns               ;
+; N/A                                     ; 53.74 MHz ( period = 18.608 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[441][3]  ; clk        ; clk      ; None                        ; None                      ; 18.377 ns               ;
+; N/A                                     ; 53.76 MHz ( period = 18.602 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1503][3] ; clk        ; clk      ; None                        ; None                      ; 18.376 ns               ;
+; N/A                                     ; 53.76 MHz ( period = 18.601 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[479][3]  ; clk        ; clk      ; None                        ; None                      ; 18.375 ns               ;
+; N/A                                     ; 53.76 MHz ( period = 18.600 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1456][3] ; clk        ; clk      ; None                        ; None                      ; 18.384 ns               ;
+; N/A                                     ; 53.76 MHz ( period = 18.600 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1464][3] ; clk        ; clk      ; None                        ; None                      ; 18.384 ns               ;
+; N/A                                     ; 53.80 MHz ( period = 18.587 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1977][3] ; clk        ; clk      ; None                        ; None                      ; 18.359 ns               ;
+; N/A                                     ; 53.80 MHz ( period = 18.586 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[135][3]  ; clk        ; clk      ; None                        ; None                      ; 18.354 ns               ;
+; N/A                                     ; 53.84 MHz ( period = 18.574 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[2015][3] ; clk        ; clk      ; None                        ; None                      ; 18.338 ns               ;
+; N/A                                     ; 53.84 MHz ( period = 18.574 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1852][3] ; clk        ; clk      ; None                        ; None                      ; 18.358 ns               ;
+; N/A                                     ; 53.86 MHz ( period = 18.565 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[2000][3] ; clk        ; clk      ; None                        ; None                      ; 18.322 ns               ;
+; N/A                                     ; 53.87 MHz ( period = 18.563 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1197][3] ; clk        ; clk      ; None                        ; None                      ; 18.325 ns               ;
+; N/A                                     ; 53.89 MHz ( period = 18.557 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[911][3]  ; clk        ; clk      ; None                        ; None                      ; 18.339 ns               ;
+; N/A                                     ; 53.89 MHz ( period = 18.556 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1018][3] ; clk        ; clk      ; None                        ; None                      ; 18.312 ns               ;
+; N/A                                     ; 53.92 MHz ( period = 18.547 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1267][3] ; clk        ; clk      ; None                        ; None                      ; 18.298 ns               ;
+; N/A                                     ; 53.92 MHz ( period = 18.547 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[944][3]  ; clk        ; clk      ; None                        ; None                      ; 18.329 ns               ;
+; N/A                                     ; 53.92 MHz ( period = 18.547 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1171][3] ; clk        ; clk      ; None                        ; None                      ; 18.298 ns               ;
+; N/A                                     ; 53.92 MHz ( period = 18.547 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[928][3]  ; clk        ; clk      ; None                        ; None                      ; 18.329 ns               ;
+; N/A                                     ; 53.92 MHz ( period = 18.545 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1241][3] ; clk        ; clk      ; None                        ; None                      ; 18.310 ns               ;
+; N/A                                     ; 53.93 MHz ( period = 18.543 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[591][3]  ; clk        ; clk      ; None                        ; None                      ; 18.304 ns               ;
+; N/A                                     ; 53.93 MHz ( period = 18.543 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1427][3] ; clk        ; clk      ; None                        ; None                      ; 18.312 ns               ;
+; N/A                                     ; 53.94 MHz ( period = 18.538 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1103][3] ; clk        ; clk      ; None                        ; None                      ; 18.310 ns               ;
+; N/A                                     ; 53.95 MHz ( period = 18.537 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1926][3] ; clk        ; clk      ; None                        ; None                      ; 18.310 ns               ;
+; N/A                                     ; 53.95 MHz ( period = 18.536 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[974][3]  ; clk        ; clk      ; None                        ; None                      ; 18.289 ns               ;
+; N/A                                     ; 53.95 MHz ( period = 18.536 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1693][3] ; clk        ; clk      ; None                        ; None                      ; 18.299 ns               ;
+; N/A                                     ; 53.95 MHz ( period = 18.536 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[669][3]  ; clk        ; clk      ; None                        ; None                      ; 18.299 ns               ;
+; N/A                                     ; 53.96 MHz ( period = 18.533 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1922][3] ; clk        ; clk      ; None                        ; None                      ; 18.307 ns               ;
+; N/A                                     ; 53.97 MHz ( period = 18.530 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1759][3] ; clk        ; clk      ; None                        ; None                      ; 18.290 ns               ;
+; N/A                                     ; 53.97 MHz ( period = 18.529 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1833][3] ; clk        ; clk      ; None                        ; None                      ; 18.285 ns               ;
+; N/A                                     ; 53.97 MHz ( period = 18.528 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1563][3] ; clk        ; clk      ; None                        ; None                      ; 18.305 ns               ;
+; N/A                                     ; 53.97 MHz ( period = 18.528 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[682][3]  ; clk        ; clk      ; None                        ; None                      ; 18.319 ns               ;
+; N/A                                     ; 53.97 MHz ( period = 18.528 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1801][3] ; clk        ; clk      ; None                        ; None                      ; 18.284 ns               ;
+; N/A                                     ; 53.98 MHz ( period = 18.527 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1951][3] ; clk        ; clk      ; None                        ; None                      ; 18.303 ns               ;
+; N/A                                     ; 53.98 MHz ( period = 18.526 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1109][0] ; clk        ; clk      ; None                        ; None                      ; 18.306 ns               ;
+; N/A                                     ; 53.98 MHz ( period = 18.525 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1621][0] ; clk        ; clk      ; None                        ; None                      ; 18.305 ns               ;
+; N/A                                     ; 53.98 MHz ( period = 18.524 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[968][3]  ; clk        ; clk      ; None                        ; None                      ; 18.288 ns               ;
+; N/A                                     ; 53.99 MHz ( period = 18.523 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[846][3]  ; clk        ; clk      ; None                        ; None                      ; 18.290 ns               ;
+; N/A                                     ; 53.99 MHz ( period = 18.521 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1806][3] ; clk        ; clk      ; None                        ; None                      ; 18.295 ns               ;
+; N/A                                     ; 53.99 MHz ( period = 18.521 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[778][3]  ; clk        ; clk      ; None                        ; None                      ; 18.281 ns               ;
+; N/A                                     ; 53.99 MHz ( period = 18.521 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[111][3]  ; clk        ; clk      ; None                        ; None                      ; 18.291 ns               ;
+; N/A                                     ; 54.00 MHz ( period = 18.520 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[334][3]  ; clk        ; clk      ; None                        ; None                      ; 18.287 ns               ;
+; N/A                                     ; 54.00 MHz ( period = 18.519 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[860][3]  ; clk        ; clk      ; None                        ; None                      ; 18.284 ns               ;
+; N/A                                     ; 54.00 MHz ( period = 18.518 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[607][3]  ; clk        ; clk      ; None                        ; None                      ; 18.291 ns               ;
+; N/A                                     ; 54.00 MHz ( period = 18.518 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1990][3] ; clk        ; clk      ; None                        ; None                      ; 18.290 ns               ;
+; N/A                                     ; 54.00 MHz ( period = 18.517 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[818][3]  ; clk        ; clk      ; None                        ; None                      ; 18.293 ns               ;
+; N/A                                     ; 54.01 MHz ( period = 18.516 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1277][0] ; clk        ; clk      ; None                        ; None                      ; 18.297 ns               ;
+; N/A                                     ; 54.01 MHz ( period = 18.516 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[697][3]  ; clk        ; clk      ; None                        ; None                      ; 18.297 ns               ;
+; N/A                                     ; 54.01 MHz ( period = 18.514 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[926][3]  ; clk        ; clk      ; None                        ; None                      ; 18.292 ns               ;
+; N/A                                     ; 54.02 MHz ( period = 18.513 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1988][3] ; clk        ; clk      ; None                        ; None                      ; 18.278 ns               ;
+; N/A                                     ; 54.02 MHz ( period = 18.512 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[732][3]  ; clk        ; clk      ; None                        ; None                      ; 18.268 ns               ;
+; N/A                                     ; 54.02 MHz ( period = 18.511 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[782][3]  ; clk        ; clk      ; None                        ; None                      ; 18.290 ns               ;
+; N/A                                     ; 54.03 MHz ( period = 18.509 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1339][3] ; clk        ; clk      ; None                        ; None                      ; 18.280 ns               ;
+; N/A                                     ; 54.03 MHz ( period = 18.508 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[2025][3] ; clk        ; clk      ; None                        ; None                      ; 18.296 ns               ;
+; N/A                                     ; 54.03 MHz ( period = 18.508 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1531][3] ; clk        ; clk      ; None                        ; None                      ; 18.279 ns               ;
+; N/A                                     ; 54.03 MHz ( period = 18.508 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[10] ; ram_2048x8:inst5|memory[733][3]  ; clk        ; clk      ; None                        ; None                      ; 18.285 ns               ;
+; N/A                                     ; 54.03 MHz ( period = 18.508 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1625][3] ; clk        ; clk      ; None                        ; None                      ; 18.257 ns               ;
+; N/A                                     ; 54.03 MHz ( period = 18.507 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1449][0] ; clk        ; clk      ; None                        ; None                      ; 18.283 ns               ;
+; N/A                                     ; 54.04 MHz ( period = 18.505 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1193][3] ; clk        ; clk      ; None                        ; None                      ; 18.250 ns               ;
+; N/A                                     ; 54.04 MHz ( period = 18.505 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[761][3]  ; clk        ; clk      ; None                        ; None                      ; 18.262 ns               ;
+; N/A                                     ; 54.04 MHz ( period = 18.504 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[603][3]  ; clk        ; clk      ; None                        ; None                      ; 18.279 ns               ;
+; N/A                                     ; 54.05 MHz ( period = 18.503 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[189][3]  ; clk        ; clk      ; None                        ; None                      ; 18.271 ns               ;
+; N/A                                     ; 54.05 MHz ( period = 18.503 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[729][3]  ; clk        ; clk      ; None                        ; None                      ; 18.260 ns               ;
+; N/A                                     ; 54.05 MHz ( period = 18.502 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[540][3]  ; clk        ; clk      ; None                        ; None                      ; 18.284 ns               ;
+; N/A                                     ; 54.05 MHz ( period = 18.501 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[119][3]  ; clk        ; clk      ; None                        ; None                      ; 18.264 ns               ;
+; N/A                                     ; 54.05 MHz ( period = 18.500 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1850][3] ; clk        ; clk      ; None                        ; None                      ; 18.275 ns               ;
+; N/A                                     ; 54.05 MHz ( period = 18.500 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1803][3] ; clk        ; clk      ; None                        ; None                      ; 18.281 ns               ;
+; N/A                                     ; 54.05 MHz ( period = 18.500 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1035][3] ; clk        ; clk      ; None                        ; None                      ; 18.275 ns               ;
+; N/A                                     ; 54.06 MHz ( period = 18.499 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[511][3]  ; clk        ; clk      ; None                        ; None                      ; 18.266 ns               ;
+; N/A                                     ; 54.06 MHz ( period = 18.499 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[536][3]  ; clk        ; clk      ; None                        ; None                      ; 18.281 ns               ;
+; N/A                                     ; 54.06 MHz ( period = 18.498 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[874][3]  ; clk        ; clk      ; None                        ; None                      ; 18.253 ns               ;
+; N/A                                     ; 54.06 MHz ( period = 18.498 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[387][3]  ; clk        ; clk      ; None                        ; None                      ; 18.265 ns               ;
+; N/A                                     ; 54.07 MHz ( period = 18.496 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1931][3] ; clk        ; clk      ; None                        ; None                      ; 18.249 ns               ;
+; N/A                                     ; 54.07 MHz ( period = 18.496 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1834][3] ; clk        ; clk      ; None                        ; None                      ; 18.271 ns               ;
+; N/A                                     ; 54.07 MHz ( period = 18.496 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1163][3] ; clk        ; clk      ; None                        ; None                      ; 18.271 ns               ;
+; N/A                                     ; 54.07 MHz ( period = 18.495 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1483][3] ; clk        ; clk      ; None                        ; None                      ; 18.272 ns               ;
+; N/A                                     ; 54.07 MHz ( period = 18.494 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1227][3] ; clk        ; clk      ; None                        ; None                      ; 18.271 ns               ;
+; N/A                                     ; 54.08 MHz ( period = 18.492 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[687][3]  ; clk        ; clk      ; None                        ; None                      ; 18.274 ns               ;
+; N/A                                     ; 54.08 MHz ( period = 18.491 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1067][3] ; clk        ; clk      ; None                        ; None                      ; 18.270 ns               ;
+; N/A                                     ; 54.09 MHz ( period = 18.489 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1535][3] ; clk        ; clk      ; None                        ; None                      ; 18.255 ns               ;
+; N/A                                     ; 54.09 MHz ( period = 18.487 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[10] ; ram_2048x8:inst5|memory[953][3]  ; clk        ; clk      ; None                        ; None                      ; 18.263 ns               ;
+; N/A                                     ; 54.09 MHz ( period = 18.487 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[407][3]  ; clk        ; clk      ; None                        ; None                      ; 18.269 ns               ;
+; N/A                                     ; 54.10 MHz ( period = 18.483 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1339][0] ; clk        ; clk      ; None                        ; None                      ; 18.252 ns               ;
+; N/A                                     ; 54.11 MHz ( period = 18.482 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1531][0] ; clk        ; clk      ; None                        ; None                      ; 18.251 ns               ;
+; N/A                                     ; 54.11 MHz ( period = 18.481 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[847][3]  ; clk        ; clk      ; None                        ; None                      ; 18.252 ns               ;
+; N/A                                     ; 54.11 MHz ( period = 18.481 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1159][3] ; clk        ; clk      ; None                        ; None                      ; 18.264 ns               ;
+; N/A                                     ; 54.12 MHz ( period = 18.478 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[10] ; ram_2048x8:inst5|memory[1598][3] ; clk        ; clk      ; None                        ; None                      ; 18.233 ns               ;
+; N/A                                     ; 54.12 MHz ( period = 18.477 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1837][0] ; clk        ; clk      ; None                        ; None                      ; 18.266 ns               ;
+; N/A                                     ; 54.12 MHz ( period = 18.477 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[2019][3] ; clk        ; clk      ; None                        ; None                      ; 18.271 ns               ;
+; N/A                                     ; 54.12 MHz ( period = 18.476 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1548][3] ; clk        ; clk      ; None                        ; None                      ; 18.239 ns               ;
+; N/A                                     ; 54.13 MHz ( period = 18.475 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[366][3]  ; clk        ; clk      ; None                        ; None                      ; 18.249 ns               ;
+; N/A                                     ; 54.13 MHz ( period = 18.475 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1213][3] ; clk        ; clk      ; None                        ; None                      ; 18.236 ns               ;
+; N/A                                     ; 54.13 MHz ( period = 18.473 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[2023][3] ; clk        ; clk      ; None                        ; None                      ; 18.268 ns               ;
+; N/A                                     ; 54.13 MHz ( period = 18.473 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1080][3] ; clk        ; clk      ; None                        ; None                      ; 18.232 ns               ;
+; N/A                                     ; 54.14 MHz ( period = 18.472 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1147][3] ; clk        ; clk      ; None                        ; None                      ; 18.246 ns               ;
+; N/A                                     ; 54.14 MHz ( period = 18.471 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1007][3] ; clk        ; clk      ; None                        ; None                      ; 18.253 ns               ;
+; N/A                                     ; 54.14 MHz ( period = 18.470 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[696][3]  ; clk        ; clk      ; None                        ; None                      ; 18.266 ns               ;
+; N/A                                     ; 54.14 MHz ( period = 18.469 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1819][3] ; clk        ; clk      ; None                        ; None                      ; 18.246 ns               ;
+; N/A                                     ; 54.14 MHz ( period = 18.469 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1311][3] ; clk        ; clk      ; None                        ; None                      ; 18.221 ns               ;
+; N/A                                     ; 54.14 MHz ( period = 18.469 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1083][3] ; clk        ; clk      ; None                        ; None                      ; 18.243 ns               ;
+; N/A                                     ; 54.14 MHz ( period = 18.469 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1056][3] ; clk        ; clk      ; None                        ; None                      ; 18.228 ns               ;
+; N/A                                     ; 54.15 MHz ( period = 18.466 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[431][3]  ; clk        ; clk      ; None                        ; None                      ; 18.248 ns               ;
+; N/A                                     ; 54.16 MHz ( period = 18.464 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1702][3] ; clk        ; clk      ; None                        ; None                      ; 18.226 ns               ;
+; N/A                                     ; 54.16 MHz ( period = 18.464 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1952][3] ; clk        ; clk      ; None                        ; None                      ; 18.243 ns               ;
+; N/A                                     ; 54.16 MHz ( period = 18.463 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1675][3] ; clk        ; clk      ; None                        ; None                      ; 18.216 ns               ;
+; N/A                                     ; 54.16 MHz ( period = 18.463 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1230][3] ; clk        ; clk      ; None                        ; None                      ; 18.230 ns               ;
+; N/A                                     ; 54.17 MHz ( period = 18.462 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[703][3]  ; clk        ; clk      ; None                        ; None                      ; 18.242 ns               ;
+; N/A                                     ; 54.17 MHz ( period = 18.459 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[393][3]  ; clk        ; clk      ; None                        ; None                      ; 18.250 ns               ;
+; N/A                                     ; 54.17 MHz ( period = 18.459 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1661][3] ; clk        ; clk      ; None                        ; None                      ; 18.224 ns               ;
+; N/A                                     ; 54.18 MHz ( period = 18.458 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[905][3]  ; clk        ; clk      ; None                        ; None                      ; 18.249 ns               ;
+; N/A                                     ; 54.18 MHz ( period = 18.457 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1917][3] ; clk        ; clk      ; None                        ; None                      ; 18.222 ns               ;
+; N/A                                     ; 54.18 MHz ( period = 18.456 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1023][3] ; clk        ; clk      ; None                        ; None                      ; 18.214 ns               ;
+; N/A                                     ; 54.18 MHz ( period = 18.456 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1839][3] ; clk        ; clk      ; None                        ; None                      ; 18.222 ns               ;
+; N/A                                     ; 54.19 MHz ( period = 18.455 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[2031][0] ; clk        ; clk      ; None                        ; None                      ; 18.234 ns               ;
+; N/A                                     ; 54.19 MHz ( period = 18.455 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1947][0] ; clk        ; clk      ; None                        ; None                      ; 18.234 ns               ;
+; N/A                                     ; 54.19 MHz ( period = 18.455 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1807][3] ; clk        ; clk      ; None                        ; None                      ; 18.221 ns               ;
+; N/A                                     ; 54.19 MHz ( period = 18.454 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1743][0] ; clk        ; clk      ; None                        ; None                      ; 18.223 ns               ;
+; N/A                                     ; 54.19 MHz ( period = 18.453 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[5]  ; ram_2048x8:inst5|memory[953][1]  ; clk        ; clk      ; None                        ; None                      ; 18.232 ns               ;
+; N/A                                     ; 54.19 MHz ( period = 18.453 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[225][0]  ; clk        ; clk      ; None                        ; None                      ; 18.206 ns               ;
+; N/A                                     ; 54.20 MHz ( period = 18.451 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1150][3] ; clk        ; clk      ; None                        ; None                      ; 18.187 ns               ;
+; N/A                                     ; 54.20 MHz ( period = 18.450 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1662][3] ; clk        ; clk      ; None                        ; None                      ; 18.186 ns               ;
+; N/A                                     ; 54.20 MHz ( period = 18.449 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1109][0] ; clk        ; clk      ; None                        ; None                      ; 18.231 ns               ;
+; N/A                                     ; 54.20 MHz ( period = 18.449 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[959][3]  ; clk        ; clk      ; None                        ; None                      ; 18.228 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.448 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1621][0] ; clk        ; clk      ; None                        ; None                      ; 18.230 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.448 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1465][3] ; clk        ; clk      ; None                        ; None                      ; 18.200 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.448 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1337][3] ; clk        ; clk      ; None                        ; None                      ; 18.200 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.447 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1225][3] ; clk        ; clk      ; None                        ; None                      ; 18.197 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.447 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1421][3] ; clk        ; clk      ; None                        ; None                      ; 18.215 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.446 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1935][3] ; clk        ; clk      ; None                        ; None                      ; 18.229 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.446 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[783][3]  ; clk        ; clk      ; None                        ; None                      ; 18.208 ns               ;
+; N/A                                     ; 54.21 MHz ( period = 18.446 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[195][3]  ; clk        ; clk      ; None                        ; None                      ; 18.213 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.445 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1744][3] ; clk        ; clk      ; None                        ; None                      ; 18.203 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.444 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[95][0]   ; clk        ; clk      ; None                        ; None                      ; 18.198 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.444 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1501][0] ; clk        ; clk      ; None                        ; None                      ; 18.197 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.444 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[413][0]  ; clk        ; clk      ; None                        ; None                      ; 18.197 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.444 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1455][3] ; clk        ; clk      ; None                        ; None                      ; 18.231 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.444 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[910][3]  ; clk        ; clk      ; None                        ; None                      ; 18.223 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.443 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[636][3]  ; clk        ; clk      ; None                        ; None                      ; 18.206 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.442 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[2031][3] ; clk        ; clk      ; None                        ; None                      ; 18.204 ns               ;
+; N/A                                     ; 54.22 MHz ( period = 18.442 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1350][3] ; clk        ; clk      ; None                        ; None                      ; 18.208 ns               ;
+; N/A                                     ; 54.23 MHz ( period = 18.440 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1549][3] ; clk        ; clk      ; None                        ; None                      ; 18.193 ns               ;
+; N/A                                     ; 54.23 MHz ( period = 18.439 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1277][0] ; clk        ; clk      ; None                        ; None                      ; 18.222 ns               ;
+; N/A                                     ; 54.23 MHz ( period = 18.439 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1740][3] ; clk        ; clk      ; None                        ; None                      ; 18.214 ns               ;
+; N/A                                     ; 54.23 MHz ( period = 18.439 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[204][3]  ; clk        ; clk      ; None                        ; None                      ; 18.214 ns               ;
+; N/A                                     ; 54.24 MHz ( period = 18.438 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[730][3]  ; clk        ; clk      ; None                        ; None                      ; 18.201 ns               ;
+; N/A                                     ; 54.24 MHz ( period = 18.437 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1919][3] ; clk        ; clk      ; None                        ; None                      ; 18.196 ns               ;
+; N/A                                     ; 54.24 MHz ( period = 18.437 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1842][3] ; clk        ; clk      ; None                        ; None                      ; 18.224 ns               ;
+; N/A                                     ; 54.24 MHz ( period = 18.436 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1357][3] ; clk        ; clk      ; None                        ; None                      ; 18.221 ns               ;
+; N/A                                     ; 54.24 MHz ( period = 18.436 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1865][3] ; clk        ; clk      ; None                        ; None                      ; 18.222 ns               ;
+; N/A                                     ; 54.24 MHz ( period = 18.436 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[537][3]  ; clk        ; clk      ; None                        ; None                      ; 18.198 ns               ;
+; N/A                                     ; 54.24 MHz ( period = 18.435 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[922][3]  ; clk        ; clk      ; None                        ; None                      ; 18.213 ns               ;
+; N/A                                     ; 54.25 MHz ( period = 18.434 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[761][0]  ; clk        ; clk      ; None                        ; None                      ; 18.189 ns               ;
+; N/A                                     ; 54.25 MHz ( period = 18.434 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1246][3] ; clk        ; clk      ; None                        ; None                      ; 18.210 ns               ;
+; N/A                                     ; 54.25 MHz ( period = 18.433 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1510][3] ; clk        ; clk      ; None                        ; None                      ; 18.208 ns               ;
+; N/A                                     ; 54.25 MHz ( period = 18.433 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[143][3]  ; clk        ; clk      ; None                        ; None                      ; 18.185 ns               ;
+; N/A                                     ; 54.25 MHz ( period = 18.432 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1244][3] ; clk        ; clk      ; None                        ; None                      ; 18.208 ns               ;
+; N/A                                     ; 54.26 MHz ( period = 18.431 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[10] ; ram_2048x8:inst5|memory[815][3]  ; clk        ; clk      ; None                        ; None                      ; 18.209 ns               ;
+; N/A                                     ; 54.26 MHz ( period = 18.431 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[265][3]  ; clk        ; clk      ; None                        ; None                      ; 18.194 ns               ;
+; N/A                                     ; 54.26 MHz ( period = 18.430 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1449][0] ; clk        ; clk      ; None                        ; None                      ; 18.208 ns               ;
+; N/A                                     ; 54.26 MHz ( period = 18.430 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1962][3] ; clk        ; clk      ; None                        ; None                      ; 18.210 ns               ;
+; N/A                                     ; 54.26 MHz ( period = 18.430 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1954][3] ; clk        ; clk      ; None                        ; None                      ; 18.210 ns               ;
+; N/A                                     ; 54.26 MHz ( period = 18.429 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1979][3] ; clk        ; clk      ; None                        ; None                      ; 18.206 ns               ;
+; N/A                                     ; 54.26 MHz ( period = 18.429 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[975][3]  ; clk        ; clk      ; None                        ; None                      ; 18.211 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.428 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1020][3] ; clk        ; clk      ; None                        ; None                      ; 18.180 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.428 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[280][3]  ; clk        ; clk      ; None                        ; None                      ; 18.203 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.427 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[956][3]  ; clk        ; clk      ; None                        ; None                      ; 18.179 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.427 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1558][3] ; clk        ; clk      ; None                        ; None                      ; 18.188 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.427 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1903][3] ; clk        ; clk      ; None                        ; None                      ; 18.183 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.427 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[570][3]  ; clk        ; clk      ; None                        ; None                      ; 18.202 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.427 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1615][3] ; clk        ; clk      ; None                        ; None                      ; 18.183 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.427 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1933][3] ; clk        ; clk      ; None                        ; None                      ; 18.191 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.427 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1143][3] ; clk        ; clk      ; None                        ; None                      ; 18.179 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.426 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1235][0] ; clk        ; clk      ; None                        ; None                      ; 18.172 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.426 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1223][0] ; clk        ; clk      ; None                        ; None                      ; 18.172 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.426 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[15][0]   ; clk        ; clk      ; None                        ; None                      ; 18.186 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.426 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[955][3]  ; clk        ; clk      ; None                        ; None                      ; 18.203 ns               ;
+; N/A                                     ; 54.27 MHz ( period = 18.426 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1677][3] ; clk        ; clk      ; None                        ; None                      ; 18.190 ns               ;
+; N/A                                     ; 54.28 MHz ( period = 18.423 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[451][3]  ; clk        ; clk      ; None                        ; None                      ; 18.197 ns               ;
+; N/A                                     ; 54.28 MHz ( period = 18.422 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1654][3] ; clk        ; clk      ; None                        ; None                      ; 18.215 ns               ;
+; N/A                                     ; 54.28 MHz ( period = 18.422 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1123][3] ; clk        ; clk      ; None                        ; None                      ; 18.196 ns               ;
+; N/A                                     ; 54.29 MHz ( period = 18.421 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[904][3]  ; clk        ; clk      ; None                        ; None                      ; 18.202 ns               ;
+; N/A                                     ; 54.29 MHz ( period = 18.420 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[5]  ; ram_2048x8:inst5|memory[1109][0] ; clk        ; clk      ; None                        ; None                      ; 18.210 ns               ;
+; N/A                                     ; 54.29 MHz ( period = 18.420 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[1910][3] ; clk        ; clk      ; None                        ; None                      ; 18.213 ns               ;
+; N/A                                     ; 54.29 MHz ( period = 18.420 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]  ; ram_2048x8:inst5|memory[937][3]  ; clk        ; clk      ; None                        ; None                      ; 18.174 ns               ;
+; N/A                                     ; 54.29 MHz ( period = 18.419 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[1575][0] ; clk        ; clk      ; None                        ; None                      ; 18.191 ns               ;
+; N/A                                     ; 54.29 MHz ( period = 18.419 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[8]  ; ram_2048x8:inst5|memory[415][0]  ; clk        ; clk      ; None                        ; None                      ; 18.190 ns               ;
+; N/A                                     ; 54.29 MHz ( period = 18.419 ns )                    ; rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[5]  ; ram_2048x8:inst5|memory[1621][0] ; clk        ; clk      ; None                        ; None                      ; 18.209 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                                   ;                                  ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------------------------------------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------+
+; tsu                                                                            ;
++-------+--------------+------------+--------+------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                     ; To Clock ;
++-------+--------------+------------+--------+------------------------+----------+
+; N/A   ; None         ; 5.144 ns   ; sw[3]  ; port_io:inst6|latch[3] ; clk      ;
+; N/A   ; None         ; 5.054 ns   ; sw[5]  ; port_io:inst6|latch[5] ; clk      ;
+; N/A   ; None         ; 5.012 ns   ; sw[6]  ; port_io:inst6|latch[6] ; clk      ;
+; N/A   ; None         ; 4.876 ns   ; sw[0]  ; port_io:inst6|latch[0] ; clk      ;
+; N/A   ; None         ; 4.623 ns   ; sw[7]  ; port_io:inst6|latch[7] ; clk      ;
+; N/A   ; None         ; 4.554 ns   ; sw[4]  ; port_io:inst6|latch[4] ; clk      ;
+; N/A   ; None         ; 4.540 ns   ; sw[2]  ; port_io:inst6|latch[2] ; clk      ;
+; N/A   ; None         ; 4.483 ns   ; sw[1]  ; port_io:inst6|latch[1] ; clk      ;
+; N/A   ; None         ; 3.734 ns   ; led[2] ; port_io:inst8|latch[2] ; clk      ;
+; N/A   ; None         ; 3.716 ns   ; led[1] ; port_io:inst8|latch[1] ; clk      ;
+; N/A   ; None         ; 3.703 ns   ; led[3] ; port_io:inst8|latch[3] ; clk      ;
+; N/A   ; None         ; 3.695 ns   ; led[0] ; port_io:inst8|latch[0] ; clk      ;
+; N/A   ; None         ; 3.447 ns   ; led[7] ; port_io:inst8|latch[7] ; clk      ;
+; N/A   ; None         ; 3.210 ns   ; led[4] ; port_io:inst8|latch[4] ; clk      ;
+; N/A   ; None         ; 3.200 ns   ; led[5] ; port_io:inst8|latch[5] ; clk      ;
+; N/A   ; None         ; 3.175 ns   ; led[6] ; port_io:inst8|latch[6] ; clk      ;
++-------+--------------+------------+--------+------------------------+----------+
+
+
++-------------------------------------------------------------------------------------+
+; tco                                                                                 ;
++-------+--------------+------------+---------------------------+--------+------------+
+; Slack ; Required tco ; Actual tco ; From                      ; To     ; From Clock ;
++-------+--------------+------------+---------------------------+--------+------------+
+; N/A   ; None         ; 10.160 ns  ; port_io:inst8|port_reg[7] ; led[7] ; clk        ;
+; N/A   ; None         ; 10.147 ns  ; port_io:inst8|port_reg[4] ; led[4] ; clk        ;
+; N/A   ; None         ; 10.102 ns  ; port_io:inst8|port_reg[3] ; led[3] ; clk        ;
+; N/A   ; None         ; 9.815 ns   ; port_io:inst8|port_reg[6] ; led[6] ; clk        ;
+; N/A   ; None         ; 9.786 ns   ; port_io:inst8|port_reg[1] ; led[1] ; clk        ;
+; N/A   ; None         ; 9.751 ns   ; port_io:inst6|dir_reg[0]  ; sw[0]  ; clk        ;
+; N/A   ; None         ; 9.733 ns   ; port_io:inst6|port_reg[2] ; sw[2]  ; clk        ;
+; N/A   ; None         ; 9.711 ns   ; port_io:inst8|port_reg[2] ; led[2] ; clk        ;
+; N/A   ; None         ; 9.450 ns   ; port_io:inst6|port_reg[0] ; sw[0]  ; clk        ;
+; N/A   ; None         ; 9.359 ns   ; port_io:inst8|port_reg[5] ; led[5] ; clk        ;
+; N/A   ; None         ; 9.200 ns   ; port_io:inst6|dir_reg[3]  ; sw[3]  ; clk        ;
+; N/A   ; None         ; 9.169 ns   ; port_io:inst6|dir_reg[4]  ; sw[4]  ; clk        ;
+; N/A   ; None         ; 9.083 ns   ; port_io:inst6|dir_reg[2]  ; sw[2]  ; clk        ;
+; N/A   ; None         ; 8.651 ns   ; port_io:inst6|dir_reg[1]  ; sw[1]  ; clk        ;
+; N/A   ; None         ; 8.628 ns   ; port_io:inst8|port_reg[0] ; led[0] ; clk        ;
+; N/A   ; None         ; 8.414 ns   ; port_io:inst6|port_reg[1] ; sw[1]  ; clk        ;
+; N/A   ; None         ; 8.258 ns   ; port_io:inst6|dir_reg[5]  ; sw[5]  ; clk        ;
+; N/A   ; None         ; 8.044 ns   ; port_io:inst6|dir_reg[6]  ; sw[6]  ; clk        ;
+; N/A   ; None         ; 7.430 ns   ; port_io:inst6|dir_reg[7]  ; sw[7]  ; clk        ;
+; N/A   ; None         ; 6.690 ns   ; port_io:inst8|dir_reg[4]  ; led[4] ; clk        ;
+; N/A   ; None         ; 6.681 ns   ; port_io:inst8|dir_reg[1]  ; led[1] ; clk        ;
+; N/A   ; None         ; 6.670 ns   ; port_io:inst8|dir_reg[0]  ; led[0] ; clk        ;
+; N/A   ; None         ; 6.659 ns   ; port_io:inst8|dir_reg[5]  ; led[5] ; clk        ;
+; N/A   ; None         ; 6.640 ns   ; port_io:inst8|dir_reg[2]  ; led[2] ; clk        ;
+; N/A   ; None         ; 6.637 ns   ; port_io:inst8|dir_reg[3]  ; led[3] ; clk        ;
+; N/A   ; None         ; 6.566 ns   ; port_io:inst6|port_reg[6] ; sw[6]  ; clk        ;
+; N/A   ; None         ; 6.558 ns   ; port_io:inst6|port_reg[7] ; sw[7]  ; clk        ;
+; N/A   ; None         ; 6.553 ns   ; port_io:inst6|port_reg[4] ; sw[4]  ; clk        ;
+; N/A   ; None         ; 6.547 ns   ; port_io:inst6|port_reg[5] ; sw[5]  ; clk        ;
+; N/A   ; None         ; 6.544 ns   ; port_io:inst6|port_reg[3] ; sw[3]  ; clk        ;
+; N/A   ; None         ; 6.446 ns   ; port_io:inst8|dir_reg[6]  ; led[6] ; clk        ;
+; N/A   ; None         ; 6.429 ns   ; port_io:inst8|dir_reg[7]  ; led[7] ; clk        ;
++-------+--------------+------------+---------------------------+--------+------------+
+
+
++--------------------------------------------------------------------------------------+
+; th                                                                                   ;
++---------------+-------------+-----------+--------+------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                     ; To Clock ;
++---------------+-------------+-----------+--------+------------------------+----------+
+; N/A           ; None        ; -2.945 ns ; led[6] ; port_io:inst8|latch[6] ; clk      ;
+; N/A           ; None        ; -2.970 ns ; led[5] ; port_io:inst8|latch[5] ; clk      ;
+; N/A           ; None        ; -2.980 ns ; led[4] ; port_io:inst8|latch[4] ; clk      ;
+; N/A           ; None        ; -3.217 ns ; led[7] ; port_io:inst8|latch[7] ; clk      ;
+; N/A           ; None        ; -3.465 ns ; led[0] ; port_io:inst8|latch[0] ; clk      ;
+; N/A           ; None        ; -3.473 ns ; led[3] ; port_io:inst8|latch[3] ; clk      ;
+; N/A           ; None        ; -3.486 ns ; led[1] ; port_io:inst8|latch[1] ; clk      ;
+; N/A           ; None        ; -3.504 ns ; led[2] ; port_io:inst8|latch[2] ; clk      ;
+; N/A           ; None        ; -4.253 ns ; sw[1]  ; port_io:inst6|latch[1] ; clk      ;
+; N/A           ; None        ; -4.310 ns ; sw[2]  ; port_io:inst6|latch[2] ; clk      ;
+; N/A           ; None        ; -4.324 ns ; sw[4]  ; port_io:inst6|latch[4] ; clk      ;
+; N/A           ; None        ; -4.393 ns ; sw[7]  ; port_io:inst6|latch[7] ; clk      ;
+; N/A           ; None        ; -4.646 ns ; sw[0]  ; port_io:inst6|latch[0] ; clk      ;
+; N/A           ; None        ; -4.782 ns ; sw[6]  ; port_io:inst6|latch[6] ; clk      ;
+; N/A           ; None        ; -4.824 ns ; sw[5]  ; port_io:inst6|latch[5] ; clk      ;
+; N/A           ; None        ; -4.914 ns ; sw[3]  ; port_io:inst6|latch[3] ; clk      ;
++---------------+-------------+-----------+--------+------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Jul 02 18:22:48 2025
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off puc251 -c puc251 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 53.4 MHz between source memory "rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]" and destination register "ram_2048x8:inst5|memory[733][3]" (period= 18.727 ns)
+    Info: + Longest memory to register delay is 18.499 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.088 ns) = 0.088 ns; Loc. = M4K_X26_Y17; Fanout = 1678; MEM Node = 'rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]'
+        Info: 2: + IC(2.182 ns) + CELL(0.420 ns) = 2.690 ns; Loc. = LCCOMB_X35_Y33_N18; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1166'
+        Info: 3: + IC(2.157 ns) + CELL(0.150 ns) = 4.997 ns; Loc. = LCCOMB_X63_Y17_N18; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1167'
+        Info: 4: + IC(1.517 ns) + CELL(0.150 ns) = 6.664 ns; Loc. = LCCOMB_X41_Y16_N22; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1168'
+        Info: 5: + IC(1.644 ns) + CELL(0.150 ns) = 8.458 ns; Loc. = LCCOMB_X50_Y27_N2; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1179'
+        Info: 6: + IC(0.241 ns) + CELL(0.150 ns) = 8.849 ns; Loc. = LCCOMB_X50_Y27_N24; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1190'
+        Info: 7: + IC(1.390 ns) + CELL(0.150 ns) = 10.389 ns; Loc. = LCCOMB_X50_Y16_N2; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1191'
+        Info: 8: + IC(1.584 ns) + CELL(0.150 ns) = 12.123 ns; Loc. = LCCOMB_X49_Y28_N28; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1192'
+        Info: 9: + IC(0.247 ns) + CELL(0.150 ns) = 12.520 ns; Loc. = LCCOMB_X49_Y28_N18; Fanout = 1; COMB Node = 'ram_2048x8:inst5|Mux4~1363'
+        Info: 10: + IC(1.993 ns) + CELL(0.271 ns) = 14.784 ns; Loc. = LCCOMB_X34_Y16_N22; Fanout = 1; COMB Node = 'ram_2048x8:inst5|dio[3]~4'
+        Info: 11: + IC(0.249 ns) + CELL(0.150 ns) = 15.183 ns; Loc. = LCCOMB_X34_Y16_N6; Fanout = 1; COMB Node = 'inst11[3]~18'
+        Info: 12: + IC(0.245 ns) + CELL(0.150 ns) = 15.578 ns; Loc. = LCCOMB_X34_Y16_N20; Fanout = 2054; COMB Node = 'inst11[3]~19'
+        Info: 13: + IC(2.555 ns) + CELL(0.366 ns) = 18.499 ns; Loc. = LCFF_X8_Y8_N13; Fanout = 1; REG Node = 'ram_2048x8:inst5|memory[733][3]'
+        Info: Total cell delay = 2.495 ns ( 13.49 % )
+        Info: Total interconnect delay = 16.004 ns ( 86.51 % )
+    Info: - Smallest clock skew is -0.055 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.671 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 16678; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(1.017 ns) + CELL(0.537 ns) = 2.671 ns; Loc. = LCFF_X8_Y8_N13; Fanout = 1; REG Node = 'ram_2048x8:inst5|memory[733][3]'
+            Info: Total cell delay = 1.536 ns ( 57.51 % )
+            Info: Total interconnect delay = 1.135 ns ( 42.49 % )
+        Info: - Longest clock path from clock "clk" to source memory is 2.726 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 16678; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.974 ns) + CELL(0.635 ns) = 2.726 ns; Loc. = M4K_X26_Y17; Fanout = 1678; MEM Node = 'rom:inst15|altsyncram:altsyncram_component|altsyncram_0371:auto_generated|q_a[7]'
+            Info: Total cell delay = 1.634 ns ( 59.94 % )
+            Info: Total interconnect delay = 1.092 ns ( 40.06 % )
+    Info: + Micro clock to output delay of source is 0.209 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "port_io:inst6|latch[3]" (data pin = "sw[3]", clock pin = "clk") is 5.144 ns
+    Info: + Longest pin to register delay is 7.845 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_T7; Fanout = 1; PIN Node = 'sw[3]'
+        Info: 2: + IC(0.000 ns) + CELL(0.832 ns) = 0.832 ns; Loc. = IOC_X0_Y11_N0; Fanout = 1; COMB Node = 'sw~4'
+        Info: 3: + IC(6.491 ns) + CELL(0.438 ns) = 7.761 ns; Loc. = LCCOMB_X33_Y16_N12; Fanout = 1; COMB Node = 'port_io:inst6|latch[3]~4'
+        Info: 4: + IC(0.000 ns) + CELL(0.084 ns) = 7.845 ns; Loc. = LCFF_X33_Y16_N13; Fanout = 2; REG Node = 'port_io:inst6|latch[3]'
+        Info: Total cell delay = 1.354 ns ( 17.26 % )
+        Info: Total interconnect delay = 6.491 ns ( 82.74 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.665 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 16678; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(1.011 ns) + CELL(0.537 ns) = 2.665 ns; Loc. = LCFF_X33_Y16_N13; Fanout = 2; REG Node = 'port_io:inst6|latch[3]'
+        Info: Total cell delay = 1.536 ns ( 57.64 % )
+        Info: Total interconnect delay = 1.129 ns ( 42.36 % )
+Info: tco from clock "clk" to destination pin "led[7]" through register "port_io:inst8|port_reg[7]" is 10.160 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.667 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 16678; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(1.013 ns) + CELL(0.537 ns) = 2.667 ns; Loc. = LCFF_X35_Y16_N27; Fanout = 1; REG Node = 'port_io:inst8|port_reg[7]'
+        Info: Total cell delay = 1.536 ns ( 57.59 % )
+        Info: Total interconnect delay = 1.131 ns ( 42.41 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 7.243 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X35_Y16_N27; Fanout = 1; REG Node = 'port_io:inst8|port_reg[7]'
+        Info: 2: + IC(4.445 ns) + CELL(2.798 ns) = 7.243 ns; Loc. = PIN_AC21; Fanout = 0; PIN Node = 'led[7]'
+        Info: Total cell delay = 2.798 ns ( 38.63 % )
+        Info: Total interconnect delay = 4.445 ns ( 61.37 % )
+Info: th for register "port_io:inst8|latch[6]" (data pin = "led[6]", clock pin = "clk") is -2.945 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.694 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 16678; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(1.040 ns) + CELL(0.537 ns) = 2.694 ns; Loc. = LCFF_X60_Y4_N23; Fanout = 2; REG Node = 'port_io:inst8|latch[6]'
+        Info: Total cell delay = 1.536 ns ( 57.02 % )
+        Info: Total interconnect delay = 1.158 ns ( 42.98 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 5.905 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_AD21; Fanout = 1; PIN Node = 'led[6]'
+        Info: 2: + IC(0.000 ns) + CELL(0.850 ns) = 0.850 ns; Loc. = IOC_X61_Y0_N2; Fanout = 1; COMB Node = 'led~1'
+        Info: 3: + IC(4.821 ns) + CELL(0.150 ns) = 5.821 ns; Loc. = LCCOMB_X60_Y4_N22; Fanout = 1; COMB Node = 'port_io:inst8|latch[6]~1'
+        Info: 4: + IC(0.000 ns) + CELL(0.084 ns) = 5.905 ns; Loc. = LCFF_X60_Y4_N23; Fanout = 2; REG Node = 'port_io:inst8|latch[6]'
+        Info: Total cell delay = 1.084 ns ( 18.36 % )
+        Info: Total interconnect delay = 4.821 ns ( 81.64 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 840 megabytes
+    Info: Processing ended: Wed Jul 02 18:23:35 2025
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:45
+
+

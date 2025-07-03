@@ -20,36 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-lpm_rom0
-# storage
-db|puc251.(2).cnf
-db|puc251.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_rom0.vhd
-18e5dab671e2ea3eb6861493996443e
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# lmf
-|users|gabri|downloads|altera|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 altsyncram
 # storage
 db|puc251.(3).cnf
@@ -1328,10 +1298,27 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-altsyncram_0371
+puc251_board
 # storage
 db|puc251.(4).cnf
 db|puc251.(4).cnf
+# case_insensitive
+# source_file
+puc251_board.bdf
+5d427f67a813d8d12573c07e5880e560
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+altsyncram_0371
+# storage
+db|puc251.(2).cnf
+db|puc251.(2).cnf
 # case_insensitive
 # source_file
 db|altsyncram_0371.tdf
